@@ -1,0 +1,8 @@
+{
+  "name": "fj-typography",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {
+    "fj-colors": "https://fake.ghe.domain/flapjack/fj-colors.git"
+  }
+}
