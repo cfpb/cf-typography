@@ -14,29 +14,34 @@ body {
 /* Link Styling
    ========================================================================== */
 
-p a,
-li a,
-dd a {
-    border-bottom: 1px dotted @pacific;
-}
-a:link {
+a {
+    border-bottom-width: 0;
+    border-bottom-style: dotted;
+    border-bottom-color: @pacific;
     color: @pacific;
     text-decoration: none;
 }
 a:visited {
-    color: @teal;
     border-bottom-color: @teal;
+    color: @teal;
 }
 a:hover {
+    border-bottom-style: solid;
+    border-bottom-color: @pacific-50;
     color: @pacific-50;
-    border-bottom: 1px solid @pacific-50;
 }
 a:focus {
     border-bottom-style: solid;
 }
 a:active {
+    border-bottom-style: solid;
+    border-bottom-color: @navy;
     color: @navy;
-    border-bottom: 1px solid @navy;
+}
+p a,
+li a,
+dd a {
+    border-bottom-width: 1px;
 }
 
 
