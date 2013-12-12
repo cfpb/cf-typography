@@ -5,11 +5,134 @@
 
 @import (less) "fonts.css";
 
+
+/* Base Variables
+   ========================================================================== */
+
+@base-font-size-px: 16px;
+@base-line-height-px: 22px;
+@base-line-height-em: unit( @base-line-height-px / @base-font-size-px, em );
+
+.avenir-regular {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+.avenir-italic {
+    font-family: "Avenir Next Italic", Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+}
+.avenir-medium {
+    font-family: "Avenir Next Medium", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+.avenir-demi {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
 body {
     color: @black;
     font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.375;
+    line-height: @base-line-height-em;
 }
+
+
+/* Headings
+   ========================================================================== */
+
+h1,
+h2,
+h3 {
+    .avenir-regular;
+}
+
+h1 {
+    @h1-size: 34px;
+
+    margin-bottom: unit( @base-line-height-px / @h1-size, em );
+    font-size: unit( @h1-size / @base-font-size-px, em );
+    line-height: unit( (@base-line-height-px * 2) / @h1-size );
+}
+h2 {
+    @h2-size: 26px;
+
+    margin-bottom: unit( @base-line-height-px / @h2-size, em );
+    font-size: unit( @h2-size / @base-font-size-px, em );
+    line-height: unit( (@base-line-height-px * 2) / @h2-size );
+}
+h3 {
+    @h3-size: 22px;
+
+    margin-bottom: unit( @base-line-height-px / @h3-size, em );
+    font-size: unit( @h3-size / @base-font-size-px, em );
+    line-height: unit( @base-line-height-px / @h3-size );
+}
+
+h4 {
+    .avenir-medium;
+    @h4-size: 18px;
+
+    margin-bottom: unit( @base-line-height-px / @h4-size, em );
+    font-size: unit( @h4-size / @base-font-size-px, em );
+    line-height: unit( @base-line-height-px / @h4-size );
+}
+
+h5,
+h6 {
+    .avenir-demi;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+h5 {
+    @h5-size: 14px;
+
+    margin-bottom: unit( @base-line-height-px / @h5-size, em );
+    font-size: unit( @h5-size / @base-font-size-px, em );
+    line-height: unit( @base-line-height-px / @h5-size );
+}
+h6 {
+    @h6-size: 12px;
+
+    margin-bottom: unit( @base-line-height-px / @h6-size, em );
+    font-size: unit( @h6-size / @base-font-size-px, em );
+    line-height: unit( @base-line-height-px / @h6-size );
+}
+
+.display {
+    // a.k.a. "superheader"
+    // For when you want a heading that's bigger than a normal H1
+
+    .avenir-demi;
+
+    @display-size: 12px;
+
+    margin-bottom: unit( @base-line-height-px / @display-size, em );
+    font-size: unit( @display-size / @base-font-size-px, em );
+    line-height: unit( @base-line-height-px / @display-size );
+}
+
+
+/* Margins
+   ========================================================================== */
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+figure {
+    // Assumes that the font size of each of these items remains the default.
+    margin-top: 0;
+    margin-bottom: @base-line-height-em;
+}
+
 
 /* Link Styling
    ========================================================================== */
@@ -38,75 +161,15 @@ a:active {
     border-bottom-color: @navy;
     color: @navy;
 }
-p a,
-li a,
-dd a {
+p > a,
+li > a,
+dd > a {
+    // Restrict bottom borders to inline text links ...
     border-bottom-width: 1px;
 }
-
-
-/* Headings
-   ========================================================================== */
-
-h1,
-h2,
-h3 {
-    font-family: "Avenir Next", Arial, sans-serif;
-    font-weight: normal;
-}
-
-h1 {
-    font-size: 2.125em;
-    line-height: 1.23529411764706;
-}
-h2 {
-    font-size: 1.625em;
-    line-height: 1.23076923076923;
-}
-h3 {
-    font-size: 1.375em;
-    line-height: 1.27272727272727;
-}
-
-h4 {
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-size: 1.125em;
-    line-height: 1.22222222222222;
-    font-weight: 500;
-}
-
-h5,
-h6 {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
-    // font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-h5 {
-    font-size: 0.875em;
-    line-height: 1.57142857142857;
-}
-h6 {
-    font-size: 0.75em;
-    line-height: 1.83333333333333;
-}
-
-.display {
-    // a.k.a. "superheader"
-    // For when you want a heading that's bigger than a normal H1
-    font-family: "Avenir Next Demi", Arial, sans-serif;
-    font-size: 3em;
-    line-height: 1.25;
-    font-weight: bold; // Default @font-face code set Demi in place of Bold
-}
-
-
-/* Margins
-   ========================================================================== */
-
-p {
-    margin: 1.375em 0;
+nav a {
+    // ... unless they're part of a nav list
+    border-bottom-width: 0;
 }
 
 
@@ -121,17 +184,21 @@ p {
 blockquote {
     padding: 0.5em 0.75em;
     border-left: 4px solid @green;
-    margin: 1em;
     background: @green-midtone;
-    font-family: "Avenir Next", Arial, sans-serif;
+    
+    .avenir-regular;
 }
 blockquote em,
 blockquote i {
-    font-family: "Avenir Next Italic", Arial, sans-serif;
+    .avenir-italic;
 }
 blockquote strong,
 blockquote b {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
+    .avenir-demi;
+}
+
+ul {
+    list-style: square;
 }
 
 
