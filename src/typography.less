@@ -13,22 +13,22 @@
 @base-line-height-px: 22px;
 @base-line-height: unit(@base-line-height-px / @base-font-size-px);
 
-.avenir-regular {
+.webfont-regular() {
     font-family: "Avenir Next", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
-.avenir-italic {
+.webfont-italic() {
     font-family: "Avenir Next Italic", Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
 }
-.avenir-medium {
+.webfont-medium() {
     font-family: "Avenir Next Medium", Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
 }
-.avenir-demi {
+.webfont-demi() {
     font-family: "Avenir Next Demi", Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -47,25 +47,31 @@ body {
 
 h1,
 h2,
-h3 {
-    .avenir-regular;
+h3,
+.h1,
+.h2,
+.h3 {
+    .webfont-regular;
 }
 
-h1 {
+h1,
+.h1 {
     @h1-size: 34px;
 
     margin-bottom: unit( @base-line-height-px / @h1-size, em );
     font-size: unit( @h1-size / @base-font-size-px, em );
     line-height: unit( (@base-line-height-px * 2) / @h1-size );
 }
-h2 {
+h2,
+.h2 {
     @h2-size: 26px;
 
     margin-bottom: unit( @base-line-height-px / @h2-size, em );
     font-size: unit( @h2-size / @base-font-size-px, em );
     line-height: unit( (@base-line-height-px * 2) / @h2-size );
 }
-h3 {
+h3,
+.h3 {
     @h3-size: 22px;
 
     margin-bottom: unit( @base-line-height-px / @h3-size, em );
@@ -73,8 +79,9 @@ h3 {
     line-height: unit( @base-line-height-px / @h3-size );
 }
 
-h4 {
-    .avenir-medium;
+h4,
+.h4 {
+    .webfont-medium;
     @h4-size: 18px;
 
     margin-bottom: unit( @base-line-height-px / @h4-size, em );
@@ -83,20 +90,24 @@ h4 {
 }
 
 h5,
-h6 {
-    .avenir-demi;
+h6,
+.h5,
+.h6 {
+    .webfont-demi;
 
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-h5 {
+h5,
+.h5 {
     @h5-size: 14px;
 
     margin-bottom: unit( @base-line-height-px / @h5-size, em );
     font-size: unit( @h5-size / @base-font-size-px, em );
     line-height: unit( @base-line-height-px / @h5-size );
 }
-h6 {
+h6,
+.h6 {
     @h6-size: 12px;
 
     margin-bottom: unit( @base-line-height-px / @h6-size, em );
@@ -104,17 +115,15 @@ h6 {
     line-height: unit( @base-line-height-px / @h6-size );
 }
 
-.display {
-    // a.k.a. "superheader"
+.superheader {
     // For when you want a heading that's bigger than a normal H1
 
-    .avenir-demi;
+    .webfont-demi;
+    @superheader-size: 48px;
 
-    @display-size: 12px;
-
-    margin-bottom: unit( @base-line-height-px / @display-size, em );
-    font-size: unit( @display-size / @base-font-size-px, em );
-    line-height: unit( @base-line-height-px / @display-size );
+    margin-bottom: unit( @base-line-height-px / @superheader-size, em );
+    font-size: unit( @superheader-size / @base-font-size-px, em );
+    line-height: unit( @base-line-height-px / @superheader-size );
 }
 
 
@@ -161,11 +170,22 @@ a:active {
     border-bottom-color: @navy;
     color: @navy;
 }
-p > a,
-li > a,
-dd > a {
+
+p,
+li,
+dd {
     // Restrict bottom borders to inline text links ...
-    border-bottom-width: 1px;
+    > strong,
+    > em,
+    > b,
+    > i {
+        > a {
+            border-bottom-width: 1px;
+        }
+    }
+    > a {
+        border-bottom-width: 1px;
+    }
 }
 nav a {
     // ... unless they're part of a nav list
@@ -186,15 +206,15 @@ blockquote {
     border-left: 4px solid @green;
     background: @green-midtone;
     
-    .avenir-regular;
+    .webfont-regular;
 }
 blockquote em,
 blockquote i {
-    .avenir-italic;
+    .webfont-italic;
 }
 blockquote strong,
 blockquote b {
-    .avenir-demi;
+    .webfont-demi;
 }
 
 ul {
