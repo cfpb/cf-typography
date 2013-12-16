@@ -46,12 +46,9 @@ body {
 /* Headings
    ========================================================================== */
 
-h1,
-h2,
-h3,
-.h1,
-.h2,
-.h3 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
     .webfont-regular;
 }
 
@@ -124,7 +121,7 @@ h6,
 
     margin-bottom: unit( @base-line-height-px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @base-line-height-px / @font-size );
+    line-height: unit( @base-line-height-px * 2 / @font-size );
 }
 
 
