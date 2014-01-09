@@ -1,5 +1,5 @@
 {
-  "name": "fj-typography",
+  "name": "cf-typography",
   "private": true,
   "version": "0.4.4",
   "main": "src/typography.less",

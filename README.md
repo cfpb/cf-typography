@@ -1,3 +1,3 @@
-# fj-typography
+# cf-typography
 
-Basic typography styling for the Flapjack front-end framework.
+Basic typography styling for [Capital Framework](http://github.com/cfpb/capital-framework).
