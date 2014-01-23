@@ -2,8 +2,6 @@
    Capital Framework
    Basic Typography
    ========================================================================== */
-
-
 /* topdoc
     name: LESS notes
     family: cf-typography
@@ -31,36 +29,6 @@
     tags:
     - cf-typography
 */
-
-@base-font-size-px: 16px;
-@base-line-height-px: 22px;
-@base-line-height: unit(@base-line-height-px / @base-font-size-px);
-
-.webfont-regular() {
-    font-family: "Avenir Next", Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
-.webfont-italic() {
-    font-family: "Avenir Next Italic", Arial, sans-serif;
-    font-style: italic;
-    font-weight: normal;
-}
-
-.webfont-medium() {
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-}
-
-.webfont-demi() {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-}
-
-
 /* topdoc
     name: Type hierarchy
     family: cf-typography
@@ -99,101 +67,86 @@
     tags:
     - cf-typography
 */
-
 body {
-    color: @black;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 100%;
-    line-height: @base-line-height;
+  color: #101820;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 100%;
+  line-height: 1.375;
 }
-
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-top: 0;
-    .webfont-regular;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0;
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
-
 h1,
 .h1 {
-    @font-size: 34px;
-    @line-height: 44px;
-
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+  margin-bottom: 0.6470588235294118em;
+  font-size: 2.125em;
+  line-height: 1.2941176470588236;
 }
-
 h2,
 .h2 {
-    @font-size: 26px;
-    @line-height: 33px;
-
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+  margin-bottom: 0.8461538461538461em;
+  font-size: 1.625em;
+  line-height: 1.2692307692307692;
 }
-
 h3,
 .h3 {
-    @font-size: 22px;
-    @line-height: 28px;
-
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+  margin-bottom: 1em;
+  font-size: 1.375em;
+  line-height: 1.2727272727272727;
 }
-
 h4,
 .h4 {
-    .webfont-medium;
-    @font-size: 18px;
-
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @base-line-height-px / @font-size );
+  font-family: "Avenir Next Medium", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 1.2222222222222223em;
+  font-size: 1.125em;
+  line-height: 1.2222222222222223;
 }
-
 h5,
 h6,
 .h5,
 .h6 {
-    .webfont-demi;
-
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  font-family: "Avenir Next Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-
 h5,
 .h5 {
-    @font-size: 14px;
-
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @base-line-height-px / @font-size );
+  margin-bottom: 1.5714285714285714em;
+  font-size: 0.875em;
+  line-height: 1.5714285714285714;
 }
-
 h6,
 .h6 {
-    @font-size: 12px;
-
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @base-line-height-px / @font-size );
+  margin-bottom: 1.8333333333333333em;
+  font-size: 0.75em;
+  line-height: 1.8333333333333333;
 }
-
 .superheader {
-    // For when you want a heading that's bigger than a normal H1
-
-    .webfont-demi;
-    @font-size: 48px;
-    @line-height: 66px;
-
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
+  font-family: "Avenir Next Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 0.4583333333333333em;
+  font-size: 3em;
+  line-height: 1.375;
 }
-
-
 /* topdoc
     name: Margins
     family: cf-typography
@@ -207,7 +160,6 @@ h6,
     tags:
     - cf-typography
 */
-
 p,
 ul,
 ol,
@@ -215,11 +167,9 @@ dl,
 table,
 blockquote,
 figure {
-    margin-top: 0;
-    margin-bottom: unit(@base-line-height, em);
+  margin-top: 0;
+  margin-bottom: 1.375em;
 }
-
-
 /* topdoc
     name: Default link
     notes:
@@ -245,41 +195,34 @@ figure {
     tags:
     - cf-typography
 */
-
 a {
-    border-bottom-width: 0;
-    border-bottom-style: dotted;
-    border-bottom-color: @pacific;
-    color: @pacific;
-    text-decoration: none;
-
-    &:visited,
-    &.visited {
-        border-bottom-color: @teal;
-        color: @teal;
-    }
-
-    &:hover,
-    &.hover {
-        border-bottom-style: solid;
-        border-bottom-color: @pacific-50;
-        color: @pacific-50;
-    }
-
-    &:focus,
-    &.focus {
-        border-bottom-style: solid;
-    }
-
-    &:active,
-    &.active {
-        border-bottom-style: solid;
-        border-bottom-color: @navy;
-        color: @navy;
-    }
+  border-bottom-width: 0;
+  border-bottom-style: dotted;
+  border-bottom-color: #0072ce;
+  color: #0072ce;
+  text-decoration: none;
 }
-
-
+a:visited,
+a.visited {
+  border-bottom-color: #005e5d;
+  color: #005e5d;
+}
+a:hover,
+a.hover {
+  border-bottom-style: solid;
+  border-bottom-color: #7fb8e6;
+  color: #7fb8e6;
+}
+a:focus,
+a.focus {
+  border-bottom-style: solid;
+}
+a:active,
+a.active {
+  border-bottom-style: solid;
+  border-bottom-color: #002d72;
+  color: #002d72;
+}
 /* topdoc
     name: Underlined links
     family: cf-typography
@@ -344,23 +287,14 @@ a {
     tags:
     - cf-typography
 */
-
-p,
-li,
-dd {
-    // Restrict bottom borders to inline text links ...
-
-    a {
-        border-bottom-width: 1px;
-    }
+p a,
+li a,
+dd a {
+  border-bottom-width: 1px;
 }
-
 nav a {
-    // ... unless they're part of a nav list
-    border-bottom-width: 0;
+  border-bottom-width: 0;
 }
-
-
 /* topdoc
     name: Blockquote
     family: cf-typography
@@ -373,25 +307,26 @@ nav a {
     tags:
     - cf-typography
 */
-
 blockquote {
-    padding: 0.5em 0.75em;
-    border-left: 4px solid @green;
-    background: @green-midtone;
-    .webfont-regular;
-
-    & em,
-    & i {
-        .webfont-italic;
-    }
-
-    & strong,
-    & b {
-        .webfont-demi;
-    }
+  padding: 0.5em 0.75em;
+  border-left: 4px solid #2cb34a;
+  background: #addc91;
+  font-family: "Avenir Next", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
 }
-
-
+blockquote em,
+blockquote i {
+  font-family: "Avenir Next Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+blockquote strong,
+blockquote b {
+  font-family: "Avenir Next Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
 /* topdoc
     name: Lists
     family: cf-typography
@@ -406,12 +341,9 @@ blockquote {
     tags:
     - cf-typography
 */
-
 ul {
-    list-style: square;
+  list-style: square;
 }
-
-
 /* topdoc
     name: IE overrides
     family: cf-typography
@@ -427,20 +359,23 @@ ul {
     - cf-typography
     - ltie9
 */
-
-.lt-ie9 {
-    h1, h2, h3, h4, h5, h6,
-    blockquote strong {
-        font-weight: normal !important;
-    }
-
-    blockquote em {
-        font-style: normal !important;
-    }
+.lt-ie9 h1,
+.lt-ie9 h2,
+.lt-ie9 h3,
+.lt-ie9 h4,
+.lt-ie9 h5,
+.lt-ie9 h6,
+.lt-ie9 blockquote strong {
+  font-weight: normal !important;
 }
-
-
+.lt-ie9 blockquote em {
+  font-style: normal !important;
+}
 /* topdoc
   name: EOF
   eof: true
 */
+/* ==========================================================================
+   Flapjack Front End
+   Color Variables
+   ========================================================================== */
