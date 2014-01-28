@@ -5,5 +5,20 @@
   "main": "src/typography.less",
   "dependencies": {
     "fj-colors": "git://fake.ghe.domain/flapjack/fj-colors.git"
+  },
+  "exportsOverride": {
+    "fj-*": {
+      "css": "src/*.css",
+      "less": "src/*.less",
+      "fonts": "src/fonts/*.*"
+    },
+    "cfpb-font-icons": {
+      "css": "src/*.css",
+      "fonts": "static/fonts/*.*"
+    },
+    "font-awesome": {
+      "css": "css/*.css",
+      "fonts": "font/*.*"
+    }
   }
 }
