@@ -1,7 +1,7 @@
 {
   "name": "cf-typography",
   "description": "Basic typography styling for Capital Framework.",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "homepage": "http://github.com/cfpb/cf-typography",
   "author": {
     "name": "Consumer Financial Protection Bureau",
