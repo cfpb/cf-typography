@@ -1,7 +1,7 @@
 {
   "name": "cf-typography",
   "description": "Basic typography styling for Capital Framework.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "http://github.com/cfpb/cf-typography",
   "author": {
     "name": "Consumer Financial Protection Bureau",
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "grunt": "latest",
+    "grunt-autoprefixer": "latest",
     "grunt-bower-task": "~0.3.2",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-concat": "latest",
