@@ -185,7 +185,7 @@ module.exports = function(grunt) {
             html5Shiv: true,
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.repository.url %>',
+            repo: '<%= pkg.homepage %>',
             custom: '<%= grunt.file.read("demo/custom.html") %>'
           }
         }
@@ -199,7 +199,7 @@ module.exports = function(grunt) {
             title: '<%= pkg.name %> docs',
             description: '<%= pkg.description %>',
             family: '<%= pkg.name %>',
-            repo: '<%= pkg.repository.url %>'
+            repo: '<%= pkg.homepage %>'
           }
         }
       }
