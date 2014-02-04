@@ -48,4 +48,3 @@ author or the affirmer.
   is licensed under MIT/GPL2.
 - [Rainbow](https://github.com/ccampbell/rainbow) by Craig Campbell is licensed
   under Apache Version 2.0.
-- [Font Awesome](http://fontawesome.io) by Dave Gandy.
