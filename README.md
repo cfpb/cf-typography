@@ -5,7 +5,7 @@ This component can be used by itself, but it was made for Capital Framework, a n
 developed at the [Consumer Financial Protection Bureau](http://cfpb.github.io/).
 
 If you would like to take advantage of more components or if you're new to Capital Framework,
-we encourage you to [start here](/cfpb/capital-framework).
+we encourage you to [start here](http://github.com/cfpb/capital-framework).
 
 - [View the docs](http://cfpb.github.io/cf-typography/docs/)
 - [See the raw demo](http://cfpb.github.io/cf-typography/demo/)
@@ -37,18 +37,10 @@ We welcome your feedback and contributions.
 4. `grunt` – Compiles LESS files and generates the docs and demo pages.
 
 
-## Using cf-typography independent of Capital Framework
+## Using this component independent of Capital Framework
 
-If you're already using [Bower](http://bower.io/), simply add cf-typography as a dependency
+If you're already using [Bower](http://bower.io/), simply add this component as a dependency
 and integrate it into your build process.
 It's not currently in the Bower registry, so you'll have to point to this Git repo's URL.
 
 You can also just view the CSS in the `demo` folder and snag what you want.
-
-
-## Questions?
-
-This component's primary maintainer is **Scott Cranfill**. Get in touch:
-- GitHub: [@Scotchester](http://github.com/Scotchester)
-- Email: scott.cranfill@cfpb.gov
-- Twitter: [@scott_ish](http://twitter.com/scott_ish)
