@@ -1,6 +1,7 @@
 {
   "name": "cf-typography",
   "description": "Basic typography styling, including heading hierarchy, links, and some handy webfont mixins for Capital Framework.",
+  "keywords": ["capital-framework", "capital", "buttons", "less"],
   "version": "0.5.1",
   "author": {
     "name": "Consumer Financial Protection Bureau",
@@ -11,9 +12,7 @@
     "type": "git",
     "url": "https://github.com/cfpb/cf-typography.git"
   },
-  "bugs": {
-    "url": "https://github.com/cfpb/cf-typography/issues"
-  },
+  "bugs": "https://github.com/cfpb/cf-typography/issues",
   "licenses": [
     {
       "type": "Public Domain",
@@ -39,6 +38,5 @@
     "grunt-string-replace": "latest",
     "grunt-topdoc": "~0.2.0",
     "cf-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
-  },
-  "keywords": []
+  }
 }
