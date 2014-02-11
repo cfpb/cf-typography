@@ -41,10 +41,11 @@ author or the affirmer.
 [policy]: http://github.com/cfpb/source-code-policy/
 [CC0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
 
+
 ## Exceptions
 
-- The Brackets Theme by Garth Braithwaite is licensed under Apache V 2.0
-- [HTML5Shiv](https://github.com/aFarkas/html5shiv) by Alexander Farakas, et al.
+- [The HTML5 Shiv](https://github.com/aFarkas/html5shiv) by Alexander Farkas, et al.,
   is licensed under MIT/GPL2.
 - [Rainbow](https://github.com/ccampbell/rainbow) by Craig Campbell is licensed
-  under Apache Version 2.0.
+  under Apache 2.0.
+- The Brackets Theme by Garth Braithwaite is licensed under Apache 2.0.
