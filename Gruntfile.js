@@ -178,14 +178,14 @@ module.exports = function(grunt) {
         options: {
           source: 'demo/static/css/',
           destination: 'demo/',
-          template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
+          template: 'node_modules/cf-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
           templateData: {
             ltIE9AltSource: 'static/css/main.lt-ie9.min.css',
             ltIE8Source: 'static/css/main.lt-ie8.min.css',
             html5Shiv: true,
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.repository.url %>',
+            repo: '<%= pkg.homepage %>',
             custom: '<%= grunt.file.read("demo/custom.html") %>'
           }
         }
@@ -194,12 +194,12 @@ module.exports = function(grunt) {
         options: {
           source: 'docs/static/css/',
           destination: 'docs/',
-          template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'code_examples' ) + '/',
+          template: 'node_modules/cf-component-demo/' + ( grunt.option('tpl') || 'code_examples' ) + '/',
           templateData: {
             title: '<%= pkg.name %> docs',
             description: '<%= pkg.description %>',
             family: '<%= pkg.name %>',
-            repo: '<%= pkg.repository.url %>'
+            repo: '<%= pkg.homepage %>'
           }
         }
       }

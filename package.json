@@ -1,24 +1,22 @@
 {
   "name": "cf-typography",
-  "description": "Basic typography styling for Capital Framework.",
+  "description": "Basic typography styling, including heading hierarchy, links, and some handy webfont mixins for Capital Framework.",
+  "keywords": ["capital-framework", "capital", "buttons", "less"],
   "version": "0.5.1",
-  "homepage": "http://github.com/cfpb/cf-typography",
   "author": {
     "name": "Consumer Financial Protection Bureau",
-    "email": "scott.cranfill@cfpb.gov",
     "url": "http://cfpb.github.io/"
   },
+  "homepage": "https://github.com/cfpb/cf-typography",
   "repository": {
     "type": "git",
-    "url": "http://github.com/cfpb/cf-typography.git"
+    "url": "https://github.com/cfpb/cf-typography.git"
   },
-  "bugs": {
-    "url": "http://github.com/cfpb/cf-typography/issues"
-  },
+  "bugs": "https://github.com/cfpb/cf-typography/issues",
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "http://github.com/cfpb/cf-typography/blob/master/TERMS.md"
+      "url": "https://github.com/cfpb/cf-typography/blob/master/TERMS.md"
     }
   ],
   "engines": {
@@ -39,7 +37,6 @@
     "grunt-legacssy": "~0.3.1",
     "grunt-string-replace": "latest",
     "grunt-topdoc": "~0.2.0",
-    "fj-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
-  },
-  "keywords": []
+    "cf-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
+  }
 }

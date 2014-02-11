@@ -1,7 +1,19 @@
 {
   "name": "cf-typography",
-  "private": true,
   "version": "0.5.1",
+  "keywords": ["capital-framework", "capital", "typography", "less"],
+  "authors": [
+    {
+      "name": "Consumer Financial Protection Bureau",
+      "url": "http://cfpb.github.io/"
+    }
+  ],
+  "homepage": "https://github.com/cfpb/cf-typography",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfpb/cf-typography.git"
+  },
+  "license": "https://github.com/cfpb/cf-typography/blob/master/TERMS.md",
   "main": "src/typography.less",
   "dependencies": {
     "fj-colors": "git://fake.ghe.domain/flapjack/fj-colors.git"
