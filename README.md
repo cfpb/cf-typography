@@ -5,7 +5,7 @@ This component can be used by itself, but it was made for Capital Framework, a n
 developed at the [Consumer Financial Protection Bureau](http://cfpb.github.io/).
 
 If you would like to take advantage of more components or if you're new to Capital Framework,
-we encourage you to [start here](https://github.com/cfpb/capital-framework). (Coming soon)
+we encourage you to [start here](https://github.com/cfpb/capital-framework). (Coming soon.)
 
 - [View the docs](http://cfpb.github.io/cf-typography/docs/)
 - [See the raw demo](http://cfpb.github.io/cf-typography/demo/)

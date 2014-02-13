@@ -35,6 +35,6 @@
     "grunt-legacssy": "~0.3.1",
     "grunt-string-replace": "latest",
     "grunt-topdoc": "~0.2.0",
-    "cf-component-demo": "git://github.com/cfpb/fj-component-demo.git"
+    "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git"
   }
 }
