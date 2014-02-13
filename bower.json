@@ -17,7 +17,7 @@
   "license": "https://github.com/cfpb/cf-typography/blob/master/TERMS.md",
   "main": "src/typography.less",
   "dependencies": {
-    "fj-colors": "git://fake.ghe.domain/flapjack/fj-colors.git"
+    "fj-colors": "git://github.com/cfpb/cf-colors.git"
   },
   "exportsOverride": {
     "fj-*": {
