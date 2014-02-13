@@ -17,21 +17,14 @@
   "license": "https://github.com/cfpb/cf-typography/blob/master/TERMS.md",
   "main": "src/typography.less",
   "dependencies": {
-    "fj-colors": "git://github.com/cfpb/cf-colors.git"
+    "cf-colors": "git://github.com/cfpb/cf-colors.git"
   },
   "exportsOverride": {
-    "fj-*": {
-      "css": "src/*.css",
-      "less": "src/*.less",
-      "fonts": "src/fonts/*.*"
-    },
-    "cfpb-font-icons": {
-      "css": "src/*.css",
-      "fonts": "static/fonts/*.*"
-    },
-    "font-awesome": {
-      "css": "css/*.css",
-      "fonts": "font/*.*"
+    "cf-*": {
+      "css": "src/**/*.css",
+      "less": "src/**/*.less",
+      "fonts": "src/fonts/*.*",
+      "js": "src/**/*.js"
     }
   }
 }
