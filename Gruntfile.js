@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 
     clean: {
       vendor: [
-        'src/vendor/cf-fe/cf.less'
+        'src/vendor/cf-concat/cf.less'
       ]
     },
 
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
           'src/*.less',
           'src/vendor/cf-*/*.less'
         ],
-        dest: 'src/vendor/cf-fe/cf.less',
+        dest: 'src/vendor/cf-concat/cf.less',
       }
     },
 
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
         files: {
           'demo/static/css/main.css': [
             'src/vendor/normalize-css/normalize.css',
-            'src/vendor/cf-fe/cf.less'
+            'src/vendor/cf-concat/cf.less'
           ]
         }
       }
