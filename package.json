@@ -16,7 +16,7 @@
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "https://github.com/cfpb/cf-typography/blob/master/TERMS.md"
+      "url": "https://github.com/cfpb/cf-typography/blob/gh-pages/TERMS.md"
     }
   ],
   "main": "src/cf-typography.less",
