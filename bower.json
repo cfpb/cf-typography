@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/cfpb/cf-typography.git"
   },
-  "license": "https://github.com/cfpb/cf-typography/blob/master/TERMS.md",
+  "license": "https://github.com/cfpb/cf-typography/blob/gh-pages/TERMS.md",
   "main": "src/cf-typography.less",
   "dependencies": {
     "cf-colors": "git://github.com/cfpb/cf-colors.git"
