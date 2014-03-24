@@ -1,5 +1,7 @@
 # cf-typography
 
+[![Dependency Status](https://www.versioneye.com/user/projects/533069907bae4b78ef00000b/badge.png)](https://www.versioneye.com/user/projects/533069907bae4b78ef00000b)
+
 Basic typography styling, including heading hierarchy, links, and some handy
 webfont mixins.
 This component can be used by itself, but it was made for Capital Framework,
