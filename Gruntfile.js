@@ -35,11 +35,15 @@ module.exports = function(grunt) {
     opt: {
       // Include path to compiled extra CSS for IE7 and below.
       // Definitely needed if this component depends on an icon font.
-      // ltIE8CSS: 'static/css/main.lt-ie8.min.css',
+      // ltIE8Source: 'static/css/main.lt-ie8.min.css',
 
       // Include path to compiled alternate CSS for IE8 and below.
       // Definitely needed if this component depends on media queries.
-      // ltIE9AltCSS: 'static/css/main.lt-ie9.min.css',
+      // ltIE9AltSource: 'static/css/main.lt-ie9.min.css',
+
+      // Set whether or not to include html5shiv for demoing a component.
+      // Only necessary if component patterns include new HTML5 elements
+      html5Shiv: false,
     },
 
     // Define tasks specific to this project here
