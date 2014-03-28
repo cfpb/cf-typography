@@ -92,30 +92,30 @@ h6,
 }
 h1,
 .h1 {
-  margin-bottom: 0.6470588235294118em;
+  margin-bottom: 0.64705882em;
   font-size: 2.125em;
-  line-height: 1.2941176470588236;
+  line-height: 1.29411765;
 }
 h2,
 .h2 {
-  margin-bottom: 0.8461538461538461em;
+  margin-bottom: 0.84615385em;
   font-size: 1.625em;
-  line-height: 1.2692307692307692;
+  line-height: 1.26923077;
 }
 h3,
 .h3 {
   margin-bottom: 1em;
   font-size: 1.375em;
-  line-height: 1.2727272727272727;
+  line-height: 1.27272727;
 }
 h4,
 .h4 {
   font-family: "Avenir Next Medium", Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
-  margin-bottom: 1.2222222222222223em;
+  margin-bottom: 1.22222222em;
   font-size: 1.125em;
-  line-height: 1.2222222222222223;
+  line-height: 1.22222222;
 }
 h5,
 h6,
@@ -129,21 +129,21 @@ h6,
 }
 h5,
 .h5 {
-  margin-bottom: 1.5714285714285714em;
+  margin-bottom: 1.57142857em;
   font-size: 0.875em;
-  line-height: 1.5714285714285714;
+  line-height: 1.57142857;
 }
 h6,
 .h6 {
-  margin-bottom: 1.8333333333333333em;
+  margin-bottom: 1.83333333em;
   font-size: 0.75em;
-  line-height: 1.8333333333333333;
+  line-height: 1.83333333;
 }
 .superheader {
   font-family: "Avenir Next Demi", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-  margin-bottom: 0.4583333333333333em;
+  margin-bottom: 0.45833333em;
   font-size: 3em;
   line-height: 1.375;
 }
