@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git",
-    "cf-grunt-config": "git://github.com/Scotchester/cf-grunt-config.git",
+    "cf-grunt-config": "git://github.com/cfpb/cf-grunt-config.git",
     "glob": "~3.2.9",
     "grunt": "latest",
     "jit-grunt": "latest",
