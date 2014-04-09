@@ -30,7 +30,7 @@ module.exports = function(grunt) {
   var config = {
 
     // Define a couple of utility variables that may be used in task options.
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('bower.json'),
     env: process.env,
     opt: {
       // Include path to compiled extra CSS for IE7 and below.
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     glob.sync('*', {cwd: path}).forEach(function(option) {
       key = option.replace(/\.js$/,'');
       object[key] = require(path + option);
-      grunt.verbose.writeln("External config item - " + key + ": " + object[key]);
+      grunt.verbose.writeln("External config item - " + key);
     });
 
     return object;
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases for our component build workflow.
    */
-  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat']);
-  grunt.registerTask('default', ['concat', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
+  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat:main']);
+  grunt.registerTask('default', ['concat:main', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
 
 };
