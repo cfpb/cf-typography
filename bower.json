@@ -1,12 +1,17 @@
 {
   "name": "cf-typography",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Basic typography styling, including heading hierarchy, links, and some handy webfont mixins for Capital Framework.",
-  "keywords": ["capital-framework", "capital", "typography", "less"],
+  "keywords": [
+    "capital-framework",
+    "capital",
+    "typography",
+    "less"
+  ],
   "authors": [
     {
       "name": "Consumer Financial Protection Bureau",
-      "url": "http://cfpb.github.io/"
+      "url": "https://cfpb.github.io/"
     }
   ],
   "homepage": "https://github.com/cfpb/cf-typography",

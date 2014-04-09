@@ -30,7 +30,7 @@ module.exports = function(grunt) {
   var config = {
 
     // Define a couple of utility variables that may be used in task options.
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('bower.json'),
     env: process.env,
     opt: {
       // Include path to compiled extra CSS for IE7 and below.
@@ -43,7 +43,19 @@ module.exports = function(grunt) {
 
       // Set whether or not to include html5shiv for demoing a component.
       // Only necessary if component patterns include new HTML5 elements
-      html5Shiv: false,
+      html5Shiv: true,
+
+      // Set whether you'd like to use a JS hack to force a redraw in the browser
+      // to avoid an IE8 bug where fonts do not appear or appear as boxes on load.
+      // ie8FontFaceHack: true,
+
+      // Set a path to a concatenated JS file that you'd like to add before the
+      // closing body tag.
+      // jsBody: 'static/js/component.min.js',
+
+      // Here's a banner with some template variables.
+      // We'll be inserting it at the top of minified assets.
+      banner: grunt.file.read('./node_modules/cf-grunt-config/cfpb-banner.txt'),
     },
 
     // Define tasks specific to this project here
@@ -63,7 +75,7 @@ module.exports = function(grunt) {
     glob.sync('*', {cwd: path}).forEach(function(option) {
       key = option.replace(/\.js$/,'');
       object[key] = require(path + option);
-      grunt.verbose.writeln("External config item - " + key + ": " + object[key]);
+      grunt.verbose.writeln("External config item - " + key);
     });
 
     return object;
@@ -89,7 +101,7 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases for our component build workflow.
    */
-  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat']);
-  grunt.registerTask('default', ['concat', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
+  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat:main']);
+  grunt.registerTask('default', ['concat:main', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
 
 };
