@@ -21,15 +21,15 @@
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Size variables</h3>
-                <ul>
+                <ul class="demo_codenotes">
                   <li>
-                    <pre class="css"><code data-language="css">@base-font-size-px: 16px;</code></pre>
+                    <pre class="code"><code>@base-font-size-px: 16px;</code></pre>
                   </li>
                   <li>
-                    <pre class="css"><code data-language="css">@base-line-height-px: 22px;</code></pre>
+                    <pre class="code"><code>@base-line-height-px: 22px;</code></pre>
                   </li>
                   <li>
-                    <pre class="css"><code data-language="css">@base-line-height: unit(@base-line-height-px / @base-font-size-px);</code></pre>
+                    <pre class="code"><code>@base-line-height: unit(@base-line-height-px / @base-font-size-px);</code></pre>
                   </li>
                 </ul>
               </header>
@@ -37,18 +37,18 @@
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Webfont mixins</h3>
-                <ul>
+                <ul class="demo_codenotes">
                   <li>
-                    <pre class="css"><code data-language="css">.webfont-regular()</code></pre>
+                    <pre class="code"><code>.webfont-regular()</code></pre>
                   </li>
                   <li>
-                    <pre class="css"><code data-language="css">.webfont-italic()</code></pre>
+                    <pre class="code"><code>.webfont-italic()</code></pre>
                   </li>
                   <li>
-                    <pre class="css"><code data-language="css">.webfont-medium()</code></pre>
+                    <pre class="code"><code>.webfont-medium()</code></pre>
                   </li>
                   <li>
-                    <pre class="css"><code data-language="css">.webfont-demi()</code></pre>
+                    <pre class="code"><code>.webfont-demi()</code></pre>
                   </li>
                 </ul>
               </header>
@@ -56,7 +56,7 @@
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Explicitly set font styles</h3>
-                <ul>
+                <ul class="demo_notes">
                   <li>Any instances of Avenir Next getting italicized or bolded must be declared explicitly so that it uses the correct webfont and does not fake the style on normal Avenir Next.</li>
                   <li>Use the webfont mixins above to make this easy. See the #blockquote styles as an example.</li>
                 </ul>
@@ -269,7 +269,7 @@ h6,
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Consistent vertical margins</h3>
-                <ul>
+                <ul class="demo_notes">
                   <li>Assumes that the font size of each of these items remains the default.</li>
                 </ul>
               </header>
@@ -298,7 +298,7 @@ figure {
         </li>
         <li id="default-link" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Default link</h1>
-          <ul>
+          <ul class="demo_notes">
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
           </ul>
           <ul class="demo-pattern-list">
@@ -395,7 +395,7 @@ a.active {
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>States</h3>
-                <ul>
+                <ul class="demo_notes">
                   <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
                   <li>The underline style properties are mostly set above in the a tag. To enable the underline simply set a bottom-border-width as done here.</li>
                 </ul>
@@ -422,7 +422,7 @@ a.active {
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Underline conditions</h3>
-                <ul>
+                <ul class="demo_notes">
                   <li>We're restricting link borders to links within p, li, and dd so that we don't have to override them every time we want a plain link.</li>
                 </ul>
               </header>
@@ -466,7 +466,7 @@ a.active {
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Exceptions for underlined links</h3>
-                <ul>
+                <ul class="demo_notes">
                   <li>Inline text links inside of a nav element are not underlined.</li>
                 </ul>
               </header>
@@ -600,7 +600,7 @@ blockquote b {
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Prevent faux/double bold and italics in IE 6-8</h3>
-                <ul>
+                <ul class="demo_notes">
                   <li>Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well.</li>
                   <li>Dependent on using H5BP's conditional classes on the &lt;html&gt; element: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md</li>
                 </ul>
