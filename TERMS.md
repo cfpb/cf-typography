@@ -49,3 +49,6 @@ author or the affirmer.
 - [Rainbow](https://github.com/ccampbell/rainbow) by Craig Campbell is licensed
   under Apache 2.0.
 - The Brackets Theme by Garth Braithwaite is licensed under Apache 2.0.
+- [Normalize](http://necolas.github.io/normalize.css/) by Nicolas Gallagher,
+  co-created with Jonathan Neal is licensed under MIT.
+  
