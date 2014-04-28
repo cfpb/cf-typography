@@ -5,9 +5,9 @@
 
 
 /* topdoc
-    name: LESS notes
-    family: cf-typography
-    patterns:
+  name: LESS notes
+  family: cf-typography
+  patterns:
     - name: Size variables
       codenotes:
         - "@base-font-size-px: 16px;"
@@ -25,10 +25,10 @@
           so that it uses the correct webfont and does not fake the style on normal Avenir Next."
         - "Use the webfont mixins above to make this easy. See the #blockquote styles as an example."
       markup: |
-       <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
-         Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
-       </blockquote> 
-    tags:
+        <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
+            Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
+        </blockquote> 
+  tags:
     - cf-typography
 */
 
@@ -62,9 +62,9 @@
 
 
 /* topdoc
-    name: Type hierarchy
-    family: cf-typography
-    patterns:
+  name: Type hierarchy
+  family: cf-typography
+  patterns:
     - name: Default body type
       markup: |
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -96,7 +96,7 @@
       markup: |
         <h1 class="superheader">Example super heading</h1>
         <p class="superheader">Example super heading</p>
-    tags:
+  tags:
     - cf-typography
 */
 
@@ -209,16 +209,16 @@ h6,
 
 
 /* topdoc
-    name: Margins
-    family: cf-typography
-    patterns:
+  name: Margins
+  family: cf-typography
+  patterns:
     - name: Consistent vertical margins
       notes:
         - "Assumes that the font size of each of these items remains the default."
       markup: |
         <p>Paragraph margin example</p>
         <p>Paragraph margin example</p>
-    tags:
+  tags:
     - cf-typography
 */
 
@@ -237,12 +237,12 @@ figure {
 
 
 /* topdoc
-    name: Default link
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
-    family: cf-typography
-    patterns:
+  name: Default link
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+      be used in production."
+  family: cf-typography
+  patterns:
     - name: Default state
       markup: |
         <a href="#">Default link style</a>
@@ -258,7 +258,7 @@ figure {
     - name: Active state
       markup: |
         <a href="#" class="active">Active link style</a>
-    tags:
+  tags:
     - cf-typography
 */
 
@@ -297,9 +297,9 @@ a {
 
 
 /* topdoc
-    name: Underlined links
-    family: cf-typography
-    patterns:
+  name: Underlined links
+  family: cf-typography
+  patterns:
     - name: States
       notes:
         - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
@@ -316,8 +316,8 @@ a {
         </p>
     - name: Underline conditions
       notes:
-       - "We're restricting link borders to links within p, li, and dd so that
-         we don't have to override them every time we want a plain link."
+        - "We're restricting link borders to links within p, li, and dd so that
+          we don't have to override them every time we want a plain link."
       markup: |
         <p>
             <a href="#">A child of a paragraph</a>
@@ -357,7 +357,7 @@ a {
                 </dd>
             </dl>
         </nav>
-    tags:
+  tags:
     - cf-typography
 */
 
@@ -378,15 +378,15 @@ nav a {
 
 
 /* topdoc
-    name: Blockquote
-    family: cf-typography
-    patterns:
+  name: Blockquote
+  family: cf-typography
+  patterns:
     - name: Default blockquote
       markup: |
-       <blockquote>
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
-       </blockquote> 
-    tags:
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
+        </blockquote> 
+  tags:
     - cf-typography
 */
 
@@ -409,17 +409,17 @@ blockquote {
 
 
 /* topdoc
-    name: Lists
-    family: cf-typography
-    patterns:
+  name: Lists
+  family: cf-typography
+  patterns:
     - name: Unordered list
       markup: |
-       <ul>
-         <li>List item</li>
-         <li>List item</li>
-         <li>List item</li>
-       </ul>
-    tags:
+        <ul>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+  tags:
     - cf-typography
 */
 
@@ -429,9 +429,9 @@ ul {
 
 
 /* topdoc
-    name: IE overrides
-    family: cf-typography
-    patterns:
+  name: IE overrides
+  family: cf-typography
+  patterns:
     - name: Prevent faux/double bold and italics in IE 6-8
       notes:
         - "Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well."
@@ -439,7 +439,7 @@ ul {
           https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md"
       markup: |
         <h5>I might appear as faux/double bold in older IE without this fix.</h5>
-    tags:
+  tags:
     - cf-typography
     - ltie9
 */

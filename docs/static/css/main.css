@@ -560,9 +560,9 @@ input[type="radio"] {
    Basic Typography
    ========================================================================== */
 /* topdoc
-    name: LESS notes
-    family: cf-typography
-    patterns:
+  name: LESS notes
+  family: cf-typography
+  patterns:
     - name: Size variables
       codenotes:
         - "@base-font-size-px: 16px;"
@@ -580,16 +580,16 @@ input[type="radio"] {
           so that it uses the correct webfont and does not fake the style on normal Avenir Next."
         - "Use the webfont mixins above to make this easy. See the #blockquote styles as an example."
       markup: |
-       <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
-         Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
-       </blockquote> 
-    tags:
+        <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
+            Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
+        </blockquote> 
+  tags:
     - cf-typography
 */
 /* topdoc
-    name: Type hierarchy
-    family: cf-typography
-    patterns:
+  name: Type hierarchy
+  family: cf-typography
+  patterns:
     - name: Default body type
       markup: |
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -621,7 +621,7 @@ input[type="radio"] {
       markup: |
         <h1 class="superheader">Example super heading</h1>
         <p class="superheader">Example super heading</p>
-    tags:
+  tags:
     - cf-typography
 */
 body {
@@ -705,16 +705,16 @@ h6,
   line-height: 1.375;
 }
 /* topdoc
-    name: Margins
-    family: cf-typography
-    patterns:
+  name: Margins
+  family: cf-typography
+  patterns:
     - name: Consistent vertical margins
       notes:
         - "Assumes that the font size of each of these items remains the default."
       markup: |
         <p>Paragraph margin example</p>
         <p>Paragraph margin example</p>
-    tags:
+  tags:
     - cf-typography
 */
 p,
@@ -728,12 +728,12 @@ figure {
   margin-bottom: 0.75em;
 }
 /* topdoc
-    name: Default link
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
-    family: cf-typography
-    patterns:
+  name: Default link
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+      be used in production."
+  family: cf-typography
+  patterns:
     - name: Default state
       markup: |
         <a href="#">Default link style</a>
@@ -749,7 +749,7 @@ figure {
     - name: Active state
       markup: |
         <a href="#" class="active">Active link style</a>
-    tags:
+  tags:
     - cf-typography
 */
 a {
@@ -781,9 +781,9 @@ a.active {
   color: #002d72;
 }
 /* topdoc
-    name: Underlined links
-    family: cf-typography
-    patterns:
+  name: Underlined links
+  family: cf-typography
+  patterns:
     - name: States
       notes:
         - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
@@ -800,8 +800,8 @@ a.active {
         </p>
     - name: Underline conditions
       notes:
-       - "We're restricting link borders to links within p, li, and dd so that
-         we don't have to override them every time we want a plain link."
+        - "We're restricting link borders to links within p, li, and dd so that
+          we don't have to override them every time we want a plain link."
       markup: |
         <p>
             <a href="#">A child of a paragraph</a>
@@ -841,7 +841,7 @@ a.active {
                 </dd>
             </dl>
         </nav>
-    tags:
+  tags:
     - cf-typography
 */
 p a,
@@ -853,15 +853,15 @@ nav a {
   border-bottom-width: 0;
 }
 /* topdoc
-    name: Blockquote
-    family: cf-typography
-    patterns:
+  name: Blockquote
+  family: cf-typography
+  patterns:
     - name: Default blockquote
       markup: |
-       <blockquote>
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
-       </blockquote> 
-    tags:
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
+        </blockquote> 
+  tags:
     - cf-typography
 */
 blockquote {
@@ -885,26 +885,26 @@ blockquote b {
   font-weight: bold;
 }
 /* topdoc
-    name: Lists
-    family: cf-typography
-    patterns:
+  name: Lists
+  family: cf-typography
+  patterns:
     - name: Unordered list
       markup: |
-       <ul>
-         <li>List item</li>
-         <li>List item</li>
-         <li>List item</li>
-       </ul>
-    tags:
+        <ul>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+  tags:
     - cf-typography
 */
 ul {
   list-style: square;
 }
 /* topdoc
-    name: IE overrides
-    family: cf-typography
-    patterns:
+  name: IE overrides
+  family: cf-typography
+  patterns:
     - name: Prevent faux/double bold and italics in IE 6-8
       notes:
         - "Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well."
@@ -912,7 +912,7 @@ ul {
           https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md"
       markup: |
         <h5>I might appear as faux/double bold in older IE without this fix.</h5>
-    tags:
+  tags:
     - cf-typography
     - ltie9
 */
@@ -936,4 +936,4 @@ ul {
    Capital Framework
    Color Variables
    ========================================================================== */
-/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fvendor%2Fcf-concat%2Fcf.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAsGA%3BEACI%2CcAAA%3BEACA%2CsBAAsB%2CwBAAtB%3BEACA%2CeAAA%3BEACA%2CkBAAA%3B%3BAAGJ%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAACpB%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BEACrB%2CaAAA%3BEAxEA%2CaAAa%2CgCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAA0EJ%3BAACA%3BEAII%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAII%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAII%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEA%2FFI%2CaAAa%2CuCAAb%3BEACA%2CkBAAA%3BEACA%2CgBAAA%3BEAiGA%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BAACA%3BAACA%3BEArGI%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEAsGA%2CmBAAA%3BEACA%2CyBAAA%3B%3BAAGJ%3BAACA%3BEAGI%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAGI%2C2BAAA%3BEACA%2CiBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BEA9HI%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEAmIA%2CuBAAA%3BEACA%2CcAAA%3BEACA%2CkBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAkBJ%3BAACA%3BAACA%3BAACA%3BAACA%3BAACA%3BAACA%3BEACI%2CaAAA%3BEACA%2CqBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8BJ%3BEACI%2CsBAAA%3BEACA%2C2BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3BEACA%2CqBAAA%3B%3BAAEA%2CCAAC%3BAACD%2CCAAC%3BEACG%2C4BAAA%3BEACA%2CcAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAsER%2CCAKI%3BAAJJ%2CEAII%3BAAHJ%2CEAGI%3BEACI%2CwBAAA%3B%3BAAIR%2CGAAI%3BEAEA%2CsBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAiBJ%3BEACI%2CqBAAA%3BEACA%2C8BAAA%3BEACA%2CmBAAA%3BEApVA%2CaAAa%2CgCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAAqVA%2CUAAE%3BAACF%2CUAAE%3BEAlVF%2CaAAa%2CuCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAAoVA%2CUAAE%3BAACF%2CUAAE%3BEA3UF%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8VJ%3BEACI%2CkBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAoBJ%2COACI%3BAADJ%2COACQ%3BAADR%2COACY%3BAADZ%2COACgB%3BAADhB%2COACoB%3BAADpB%2COACwB%3BAADxB%2COAEI%2CWAAW%3BEACP%2C8BAAA%3B%3BAAHR%2COAMI%2CWAAW%3BEACP%2C6BAAA%22%7D */
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fvendor%2Fcf-concat%2Fcf.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAsGA%3BEACI%2CcAAA%3BEACA%2CsBAAsB%2CwBAAtB%3BEACA%2CeAAA%3BEACA%2CkBAAA%3B%3BAAGJ%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAACpB%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BEACrB%2CaAAA%3BEAxEA%2CaAAa%2CgCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAA0EJ%3BAACA%3BEAMI%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAMI%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAMI%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEArGI%2CaAAa%2CuCAAb%3BEACA%2CkBAAA%3BEACA%2CgBAAA%3BEAyGA%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BAACA%3BAACA%3BEA7GI%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEA8GA%2CmBAAA%3BEACA%2CyBAAA%3B%3BAAGJ%3BAACA%3BEAKI%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAKI%2C2BAAA%3BEACA%2CiBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BEA1II%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEAiJA%2CuBAAA%3BEACA%2CcAAA%3BEACA%2CkBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAkBJ%3BAACA%3BAACA%3BAACA%3BAACA%3BAACA%3BAACA%3BEACI%2CaAAA%3BEAGA%2CqBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8BJ%3BEACI%2CsBAAA%3BEACA%2C2BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3BEACA%2CqBAAA%3B%3BAAEA%2CCAAC%3BAACD%2CCAAC%3BEACG%2C4BAAA%3BEACA%2CcAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAsER%2CCAKI%3BAAJJ%2CEAII%3BAAHJ%2CEAGI%3BEACI%2CwBAAA%3B%3BAAIR%2CGAAI%3BEAEA%2CsBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAiBJ%3BEACI%2CqBAAA%3BEACA%2C8BAAA%3BEACA%2CmBAAA%3BEApWA%2CaAAa%2CgCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAAqWA%2CUAAE%3BAACF%2CUAAE%3BEAlWF%2CaAAa%2CuCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAAoWA%2CUAAE%3BAACF%2CUAAE%3BEA3VF%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8WJ%3BEACI%2CkBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAoBJ%2COACI%3BAADJ%2COACQ%3BAADR%2COACY%3BAADZ%2COACgB%3BAADhB%2COACoB%3BAADpB%2COACwB%3BAADxB%2COAEI%2CWAAW%3BEACP%2C8BAAA%3B%3BAAHR%2COAMI%2CWAAW%3BEACP%2C6BAAA%22%7D */
