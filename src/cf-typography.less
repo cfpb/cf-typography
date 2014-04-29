@@ -8,48 +8,14 @@
 
 
 /* topdoc
-  name: Licensed fonts
-  family: cf-typography
-  notes:
-    - "Avenir Next is included via the licensed-fonts.css file.
-      This file contains absolute links to our paid font service.
-      Fonts included this way will only work on CFPB-registered domains."
-  tags:
-    - cf-typography
-*/
-
-
-/* topdoc
-  name: Less notes
+  name: Less variables
   family: cf-typography
   patterns:
-    - name: Size variables
+    - name: Font sizes
       codenotes:
         - "@base-font-size-px: 16px;"
         - "@base-line-height-px: 22px;"
         - "@base-line-height: unit(@base-line-height-px / @base-font-size-px);"
-    - name: Webfont mixins
-      codenotes:
-        - ".webfont-regular()"
-        - ".webfont-italic()"
-        - ".webfont-medium()"
-        - ".webfont-demi()"
-    - name: Explicitly set font styles
-      notes:
-        - "Any instances of Avenir Next getting italicized or bolded must be declared explicitly
-          so that it uses the correct webfont and does not fake the style on normal Avenir Next."
-        - "Use the webfont mixins above to make this easy. See the #blockquote styles as an example."
-      markup: |
-        <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
-            Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
-        </blockquote> 
-    - name: IE overrides, preventing faux/double bold and italics in IE 6-8
-      notes:
-        - "Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well."
-        - "Dependent on using H5BP's conditional classes on the <html> element:
-          https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md"
-      markup: |
-        <h5>I might appear as faux/double bold in older IE without this fix.</h5>
   tags:
     - cf-typography
 */
@@ -57,6 +23,44 @@
 @base-font-size-px: 16px;
 @base-line-height-px: 22px;
 @base-line-height: unit(@base-line-height-px / @base-font-size-px);
+
+
+/* topdoc
+  name: Webfonts
+  family: cf-typography
+  patterns:
+    - name: Licensed webfonts
+      notes:
+        - "Avenir Next is included via the licensed-fonts.css file.
+          This file contains absolute links to our paid font service.
+          Fonts included this way will only work on CFPB-registered domains."
+    - name: Webfont mixins
+      codenotes:
+        - ".webfont-regular()"
+        - ".webfont-italic()"
+        - ".webfont-medium()"
+        - ".webfont-demi()"
+      notes:
+        - "Use these mixins to easily add the Avenir Next font family to your
+          elements."
+        - "To avoid faux bold and italics in Avenir Next, you must use the font
+          family name for that particular style. So when defining an italic or
+          bold style in Avenir Next you need to use the Avenir Next Italic font
+          family. Use the mixins when setting bold or italic text as they also
+          set the appropriate font-weight and font-style."
+        - "These mixins also add the appropriate .lt-ie9 overrides.
+          .lt-ie9 overrides are necessary to override font-style and font-weight
+          each time the webfont is used. These overrides are built into the webfont
+          mixins so you get them automatically. Note that this requires you to
+          use conditional classes on the <html> element:
+          https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes."
+      markup: |
+        <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
+            Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
+        </blockquote>
+  tags:
+    - cf-typography
+*/
 
 .webfont-regular() {
     font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
