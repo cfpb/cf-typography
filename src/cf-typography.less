@@ -125,7 +125,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 0;
-    .webfont-regular;
+    .webfont-regular();
 }
 
 h1,
@@ -166,7 +166,7 @@ h3,
 
 h4,
 .h4 {
-    .webfont-medium;
+    .webfont-medium();
     @font-size: 18px;
 
     // Spacing in the design manual is based off of the baseline so this margin
@@ -180,7 +180,7 @@ h5,
 h6,
 .h5,
 .h6 {
-    .webfont-demi;
+    .webfont-demi();
 
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -211,7 +211,7 @@ h6,
 .superheader {
     // For when you want a heading that's bigger than a normal H1
 
-    .webfont-demi;
+    .webfont-demi();
     @font-size: 48px;
     @line-height: 66px;
 
@@ -409,16 +409,16 @@ blockquote {
     padding: 0.5em 0.75em;
     border-left: 4px solid @green;
     background: @green-midtone;
-    .webfont-regular;
+    .webfont-regular();
 
     & em,
     & i {
-        .webfont-italic;
+        .webfont-italic();
     }
 
     & strong,
     & b {
-        .webfont-demi;
+        .webfont-demi();
     }
 }
 
