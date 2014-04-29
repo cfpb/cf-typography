@@ -5,6 +5,20 @@
 
 
 /* topdoc
+  name: Licensed fonts
+  family: cf-typography
+  notes:
+    - "Avenir Next is included via the licensed-fonts.css file.
+      This file contains absolute links to our paid font service.
+      Fonts included this way will only work on CFPB-registered domains."
+  tags:
+    - cf-typography
+*/
+
+@import (less) "licensed-fonts.css";
+
+
+/* topdoc
   name: LESS notes
   family: cf-typography
   patterns:
@@ -37,25 +51,25 @@
 @base-line-height: unit(@base-line-height-px / @base-font-size-px);
 
 .webfont-regular() {
-    font-family: "Avenir Next W01", Arial, sans-serif;
+    font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
 
 .webfont-italic() {
-    font-family: "Avenir Next W01", Arial, sans-serif;
+    font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
 }
 
 .webfont-medium() {
-    font-family: "Avenir Next W01", Arial, sans-serif;
+    font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
 }
 
 .webfont-demi() {
-    font-family: "Avenir Next W01", Arial, sans-serif;
+    font-family: "Avenir Next LT W01 Demi", Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
 }
