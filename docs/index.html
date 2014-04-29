@@ -78,6 +78,21 @@
 &lt;/blockquote&gt;</code></pre>
               </footer>
             </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>IE overrides, preventing faux/double bold and italics in IE 6-8</h3>
+                <ul class="demo_notes">
+                  <li>Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well.</li>
+                  <li>Dependent on using H5BP's conditional classes on the &lt;html&gt; element: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md</li>
+                </ul>
+              </header>
+              <section>
+<h5>I might appear as faux/double bold in older IE without this fix.</h5>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;h5&gt;I might appear as faux/double bold in older IE without this fix.&lt;/h5&gt;</code></pre>
+              </footer>
+            </li>
           </ul>
         </li>
         <li id="type-hierarchy" class="demo-component-list_item wrapper">
@@ -237,6 +252,10 @@ h4,
   font-size: 1.125em;
   line-height: 1.22222222;
 }
+.lt-ie9 h4,
+.lt-ie9 .h4 {
+  font-weight: normal !important;
+}
 h5,
 h6,
 .h5,
@@ -246,6 +265,12 @@ h6,
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.lt-ie9 h5,
+.lt-ie9 h6,
+.lt-ie9 .h5,
+.lt-ie9 .h6 {
+  font-weight: normal !important;
 }
 h5,
 .h5 {
@@ -266,6 +291,9 @@ h6,
   margin-bottom: 0.1875em;
   font-size: 3em;
   line-height: 1.375;
+}
+.lt-ie9 .superheader {
+  font-weight: normal !important;
 }</code></pre>
           </div>
         </li>
@@ -563,11 +591,19 @@ blockquote i {
   font-style: italic;
   font-weight: normal;
 }
+.lt-ie9 blockquote em,
+.lt-ie9 blockquote i {
+  font-style: normal !important;
+}
 blockquote strong,
 blockquote b {
   font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
+}
+.lt-ie9 blockquote strong,
+.lt-ie9 blockquote b {
+  font-weight: normal !important;
 }</code></pre>
           </div>
         </li>
@@ -597,42 +633,6 @@ blockquote b {
           <div class="demo-pattern-css">
             <pre class="css"><code data-language="css">ul {
   list-style: square;
-}</code></pre>
-          </div>
-        </li>
-        <li id="ie-overrides" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">IE overrides</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Prevent faux/double bold and italics in IE 6-8</h3>
-                <ul class="demo_notes">
-                  <li>Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well.</li>
-                  <li>Dependent on using H5BP's conditional classes on the &lt;html&gt; element: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md</li>
-                </ul>
-              </header>
-              <section>
-<h5>I might appear as faux/double bold in older IE without this fix.</h5>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;h5&gt;I might appear as faux/double bold in older IE without this fix.&lt;/h5&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.lt-ie9 h1,
-.lt-ie9 h2,
-.lt-ie9 h3,
-.lt-ie9 h4,
-.lt-ie9 h5,
-.lt-ie9 h6,
-.lt-ie9 blockquote strong,
-.lt-ie9 blockquote b {
-  font-weight: normal !important;
-}
-.lt-ie9 blockquote em,
-.lt-ie9 blockquote i {
-  font-style: normal !important;
 }</code></pre>
           </div>
         </li>

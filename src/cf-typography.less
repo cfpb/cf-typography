@@ -43,6 +43,13 @@
         <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
             Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
         </blockquote> 
+    - name: IE overrides, preventing faux/double bold and italics in IE 6-8
+      notes:
+        - "Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well."
+        - "Dependent on using H5BP's conditional classes on the <html> element:
+          https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md"
+      markup: |
+        <h5>I might appear as faux/double bold in older IE without this fix.</h5>
   tags:
     - cf-typography
 */
@@ -61,18 +68,27 @@
     font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
+    .lt-ie9 & {
+        font-style: normal !important;
+    }
 }
 
 .webfont-medium() {
     font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
+    .lt-ie9 & {
+        font-weight: normal !important;
+    }
 }
 
 .webfont-demi() {
     font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
+    .lt-ie9 & {
+        font-weight: normal !important;
+    }
 }
 
 
@@ -440,36 +456,6 @@ blockquote {
 
 ul {
     list-style: square;
-}
-
-
-/* topdoc
-  name: IE overrides
-  family: cf-typography
-  patterns:
-    - name: Prevent faux/double bold and italics in IE 6-8
-      notes:
-        - "Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well."
-        - "Dependent on using H5BP's conditional classes on the <html> element:
-          https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md"
-      markup: |
-        <h5>I might appear as faux/double bold in older IE without this fix.</h5>
-  tags:
-    - cf-typography
-    - ltie9
-*/
-
-.lt-ie9 {
-    h1, h2, h3, h4, h5, h6,
-    blockquote strong,
-    blockquote b {
-        font-weight: normal !important;
-    }
-
-    blockquote em,
-    blockquote i {
-        font-style: normal !important;
-    }
 }
 
 
