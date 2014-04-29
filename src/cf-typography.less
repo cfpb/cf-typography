@@ -4,10 +4,25 @@
    ========================================================================== */
 
 
+@import (less) "licensed-fonts.css";
+
+
 /* topdoc
-    name: LESS notes
-    family: cf-typography
-    patterns:
+  name: Licensed fonts
+  family: cf-typography
+  notes:
+    - "Avenir Next is included via the licensed-fonts.css file.
+      This file contains absolute links to our paid font service.
+      Fonts included this way will only work on CFPB-registered domains."
+  tags:
+    - cf-typography
+*/
+
+
+/* topdoc
+  name: Less notes
+  family: cf-typography
+  patterns:
     - name: Size variables
       codenotes:
         - "@base-font-size-px: 16px;"
@@ -25,10 +40,10 @@
           so that it uses the correct webfont and does not fake the style on normal Avenir Next."
         - "Use the webfont mixins above to make this easy. See the #blockquote styles as an example."
       markup: |
-       <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
-         Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
-       </blockquote> 
-    tags:
+        <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
+            Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
+        </blockquote> 
+  tags:
     - cf-typography
 */
 
@@ -37,37 +52,37 @@
 @base-line-height: unit(@base-line-height-px / @base-font-size-px);
 
 .webfont-regular() {
-    font-family: "Avenir Next", Arial, sans-serif;
+    font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
 }
 
 .webfont-italic() {
-    font-family: "Avenir Next Italic", Arial, sans-serif;
+    font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
     font-style: italic;
     font-weight: normal;
 }
 
 .webfont-medium() {
-    font-family: "Avenir Next Medium", Arial, sans-serif;
+    font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
 }
 
 .webfont-demi() {
-    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
 }
 
 
 /* topdoc
-    name: Type hierarchy
-    family: cf-typography
-    patterns:
+  name: Type hierarchy
+  family: cf-typography
+  patterns:
     - name: Default body type
       markup: |
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     - name: Heading level 1
       markup: |
         <h1>Example heading element</h1>
@@ -96,7 +111,7 @@
       markup: |
         <h1 class="superheader">Example super heading</h1>
         <p class="superheader">Example super heading</p>
-    tags:
+  tags:
     - cf-typography
 */
 
@@ -110,7 +125,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 0;
-    .webfont-regular;
+    .webfont-regular();
 }
 
 h1,
@@ -118,7 +133,9 @@ h1,
     @font-size: 34px;
     @line-height: 44px;
 
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 16px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
 }
@@ -128,7 +145,9 @@ h2,
     @font-size: 26px;
     @line-height: 33px;
 
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 20px.
+    margin-bottom: unit( 8px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
 }
@@ -138,17 +157,21 @@ h3,
     @font-size: 22px;
     @line-height: 28px;
 
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 15px.
+    margin-bottom: unit( 5px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
 }
 
 h4,
 .h4 {
-    .webfont-medium;
+    .webfont-medium();
     @font-size: 18px;
 
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 15px.
+    margin-bottom: unit( 5px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @base-line-height-px / @font-size );
 }
@@ -157,7 +180,7 @@ h5,
 h6,
 .h5,
 .h6 {
-    .webfont-demi;
+    .webfont-demi();
 
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -167,7 +190,9 @@ h5,
 .h5 {
     @font-size: 14px;
 
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 15px.
+    margin-bottom: unit( 5px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @base-line-height-px / @font-size );
 }
@@ -176,7 +201,9 @@ h6,
 .h6 {
     @font-size: 12px;
 
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 15px.
+    margin-bottom: unit( 5px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @base-line-height-px / @font-size );
 }
@@ -184,27 +211,29 @@ h6,
 .superheader {
     // For when you want a heading that's bigger than a normal H1
 
-    .webfont-demi;
+    .webfont-demi();
     @font-size: 48px;
     @line-height: 66px;
 
-    margin-bottom: unit( @base-line-height-px / @font-size, em );
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 9px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
 }
 
 
 /* topdoc
-    name: Margins
-    family: cf-typography
-    patterns:
+  name: Margins
+  family: cf-typography
+  patterns:
     - name: Consistent vertical margins
       notes:
         - "Assumes that the font size of each of these items remains the default."
       markup: |
         <p>Paragraph margin example</p>
         <p>Paragraph margin example</p>
-    tags:
+  tags:
     - cf-typography
 */
 
@@ -216,17 +245,19 @@ table,
 blockquote,
 figure {
     margin-top: 0;
-    margin-bottom: unit(@base-line-height, em);
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 20px.
+    margin-bottom: unit(12px / @base-font-size-px, em);
 }
 
 
 /* topdoc
-    name: Default link
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
-    family: cf-typography
-    patterns:
+  name: Default link
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+      be used in production."
+  family: cf-typography
+  patterns:
     - name: Default state
       markup: |
         <a href="#">Default link style</a>
@@ -242,7 +273,7 @@ figure {
     - name: Active state
       markup: |
         <a href="#" class="active">Active link style</a>
-    tags:
+  tags:
     - cf-typography
 */
 
@@ -281,9 +312,9 @@ a {
 
 
 /* topdoc
-    name: Underlined links
-    family: cf-typography
-    patterns:
+  name: Underlined links
+  family: cf-typography
+  patterns:
     - name: States
       notes:
         - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
@@ -300,8 +331,8 @@ a {
         </p>
     - name: Underline conditions
       notes:
-       - "We're restricting link borders to links within p, li, and dd so that
-         we don't have to override them every time we want a plain link."
+        - "We're restricting link borders to links within p, li, and dd so that
+          we don't have to override them every time we want a plain link."
       markup: |
         <p>
             <a href="#">A child of a paragraph</a>
@@ -341,7 +372,7 @@ a {
                 </dd>
             </dl>
         </nav>
-    tags:
+  tags:
     - cf-typography
 */
 
@@ -362,15 +393,15 @@ nav a {
 
 
 /* topdoc
-    name: Blockquote
-    family: cf-typography
-    patterns:
+  name: Blockquote
+  family: cf-typography
+  patterns:
     - name: Default blockquote
       markup: |
-       <blockquote>
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
-       </blockquote> 
-    tags:
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
+        </blockquote> 
+  tags:
     - cf-typography
 */
 
@@ -378,32 +409,32 @@ blockquote {
     padding: 0.5em 0.75em;
     border-left: 4px solid @green;
     background: @green-midtone;
-    .webfont-regular;
+    .webfont-regular();
 
     & em,
     & i {
-        .webfont-italic;
+        .webfont-italic();
     }
 
     & strong,
     & b {
-        .webfont-demi;
+        .webfont-demi();
     }
 }
 
 
 /* topdoc
-    name: Lists
-    family: cf-typography
-    patterns:
+  name: Lists
+  family: cf-typography
+  patterns:
     - name: Unordered list
       markup: |
-       <ul>
-         <li>List item</li>
-         <li>List item</li>
-         <li>List item</li>
-       </ul>
-    tags:
+        <ul>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+  tags:
     - cf-typography
 */
 
@@ -413,9 +444,9 @@ ul {
 
 
 /* topdoc
-    name: IE overrides
-    family: cf-typography
-    patterns:
+  name: IE overrides
+  family: cf-typography
+  patterns:
     - name: Prevent faux/double bold and italics in IE 6-8
       notes:
         - "Any bold or italic Avenir elements added to the base styles MUST BE added to this section, as well."
@@ -423,7 +454,7 @@ ul {
           https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md"
       markup: |
         <h5>I might appear as faux/double bold in older IE without this fix.</h5>
-    tags:
+  tags:
     - cf-typography
     - ltie9
 */

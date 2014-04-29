@@ -15,8 +15,14 @@
         <h1 class="h5">cf-typography docs</h1>
       </header>
       <ul class="demo-component-list">
+        <li id="licensed-fonts" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Licensed fonts</h1>
+          <ul class="demo_notes">
+            <li>Avenir Next is included via the licensed-fonts.css file. This file contains absolute links to our paid font service. Fonts included this way will only work on CFPB-registered domains.</li>
+          </ul>
+        </li>
         <li id="less-notes" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">LESS notes</h1>
+          <h1 class="demo-component-list_header">Less notes</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
@@ -63,12 +69,12 @@
               </header>
               <section>
 <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
-  Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
+    Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
 </blockquote> 
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;blockquote cite=&quot;http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes&quot;&gt;
-  Any instances of Avenir Next getting &lt;em&gt;italic&lt;/em&gt;&lt;i&gt;ized&lt;/i&gt; or &lt;strong&gt;bold&lt;/strong&gt;&lt;b&gt;ed&lt;/b&gt; must be declared explicitly ...
+    Any instances of Avenir Next getting &lt;em&gt;italic&lt;/em&gt;&lt;i&gt;ized&lt;/i&gt; or &lt;strong&gt;bold&lt;/strong&gt;&lt;b&gt;ed&lt;/b&gt; must be declared explicitly ...
 &lt;/blockquote&gt;</code></pre>
               </footer>
             </li>
@@ -82,10 +88,10 @@
                 <h3>Default body type</h3>
               </header>
               <section>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;p&gt;Lorem ipsum dolor sit amet, &lt;em&gt;consectetur adipisicing elit&lt;/em&gt;, sed do eiusmod &lt;strong&gt;tempor incididunt&lt;/strong&gt; ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -200,34 +206,34 @@ h6,
 .h5,
 .h6 {
   margin-top: 0;
-  font-family: &quot;Avenir Next&quot;, Arial, sans-serif;
+  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 h1,
 .h1 {
-  margin-bottom: 0.64705882em;
+  margin-bottom: 0.47058824em;
   font-size: 2.125em;
   line-height: 1.29411765;
 }
 h2,
 .h2 {
-  margin-bottom: 0.84615385em;
+  margin-bottom: 0.30769231em;
   font-size: 1.625em;
   line-height: 1.26923077;
 }
 h3,
 .h3 {
-  margin-bottom: 1em;
+  margin-bottom: 0.22727273em;
   font-size: 1.375em;
   line-height: 1.27272727;
 }
 h4,
 .h4 {
-  font-family: &quot;Avenir Next Medium&quot;, Arial, sans-serif;
+  font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
-  margin-bottom: 1.22222222em;
+  margin-bottom: 0.27777778em;
   font-size: 1.125em;
   line-height: 1.22222222;
 }
@@ -235,7 +241,7 @@ h5,
 h6,
 .h5,
 .h6 {
-  font-family: &quot;Avenir Next Demi&quot;, Arial, sans-serif;
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   letter-spacing: 1px;
@@ -243,21 +249,21 @@ h6,
 }
 h5,
 .h5 {
-  margin-bottom: 1.57142857em;
+  margin-bottom: 0.35714286em;
   font-size: 0.875em;
   line-height: 1.57142857;
 }
 h6,
 .h6 {
-  margin-bottom: 1.83333333em;
+  margin-bottom: 0.41666667em;
   font-size: 0.75em;
   line-height: 1.83333333;
 }
 .superheader {
-  font-family: &quot;Avenir Next Demi&quot;, Arial, sans-serif;
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
-  margin-bottom: 0.45833333em;
+  margin-bottom: 0.1875em;
   font-size: 3em;
   line-height: 1.375;
 }</code></pre>
@@ -292,7 +298,7 @@ table,
 blockquote,
 figure {
   margin-top: 0;
-  margin-bottom: 1.375em;
+  margin-bottom: 0.75em;
 }</code></pre>
           </div>
         </li>
@@ -532,12 +538,12 @@ nav a {
               </header>
               <section>
 <blockquote>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
 </blockquote> 
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;blockquote&gt;
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
 &lt;/blockquote&gt;</code></pre>
               </footer>
             </li>
@@ -547,19 +553,19 @@ nav a {
   padding: 0.5em 0.75em;
   border-left: 4px solid #2cb34a;
   background: #addc91;
-  font-family: &quot;Avenir Next&quot;, Arial, sans-serif;
+  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 blockquote em,
 blockquote i {
-  font-family: &quot;Avenir Next Italic&quot;, Arial, sans-serif;
+  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
 blockquote strong,
 blockquote b {
-  font-family: &quot;Avenir Next Demi&quot;, Arial, sans-serif;
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }</code></pre>
@@ -574,16 +580,16 @@ blockquote b {
               </header>
               <section>
 <ul>
-  <li>List item</li>
-  <li>List item</li>
-  <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
+    <li>List item</li>
 </ul>
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;ul&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
-  &lt;li&gt;List item&lt;/li&gt;
+    &lt;li&gt;List item&lt;/li&gt;
+    &lt;li&gt;List item&lt;/li&gt;
+    &lt;li&gt;List item&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
               </footer>
             </li>
