@@ -54,10 +54,6 @@
           mixins so you get them automatically. Note that this requires you to
           use conditional classes on the <html> element:
           https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes."
-      markup: |
-        <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
-            Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
-        </blockquote>
   tags:
     - cf-typography
 */
@@ -409,37 +405,6 @@ dd {
 nav a {
     // ... unless they're part of a nav list
     border-bottom-width: 0;
-}
-
-
-/* topdoc
-  name: Blockquote
-  family: cf-typography
-  patterns:
-    - name: Default blockquote
-      markup: |
-        <blockquote>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
-        </blockquote> 
-  tags:
-    - cf-typography
-*/
-
-blockquote {
-    padding: 0.5em 0.75em;
-    border-left: 4px solid @green;
-    background: @green-midtone;
-    .webfont-regular();
-
-    & em,
-    & i {
-        .webfont-italic();
-    }
-
-    & strong,
-    & b {
-        .webfont-demi();
-    }
 }
 
 

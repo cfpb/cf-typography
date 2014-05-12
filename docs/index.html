@@ -70,16 +70,6 @@
                   <li>These mixins also add the appropriate .lt-ie9 overrides. .lt-ie9 overrides are necessary to override font-style and font-weight each time the webfont is used. These overrides are built into the webfont mixins so you get them automatically. Note that this requires you to use conditional classes on the &lt;html&gt; element: https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes.</li>
                 </ul>
               </header>
-              <section>
-<blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
-    Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
-</blockquote>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;blockquote cite=&quot;http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes&quot;&gt;
-    Any instances of Avenir Next getting &lt;em&gt;italic&lt;/em&gt;&lt;i&gt;ized&lt;/i&gt; or &lt;strong&gt;bold&lt;/strong&gt;&lt;b&gt;ed&lt;/b&gt; must be declared explicitly ...
-&lt;/blockquote&gt;</code></pre>
-              </footer>
             </li>
           </ul>
         </li>
@@ -542,56 +532,6 @@ dd a {
 }
 nav a {
   border-bottom-width: 0;
-}</code></pre>
-          </div>
-        </li>
-        <li id="blockquote" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Blockquote</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default blockquote</h3>
-              </header>
-              <section>
-<blockquote>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
-</blockquote> 
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;blockquote&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
-&lt;/blockquote&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">blockquote {
-  padding: 0.5em 0.75em;
-  border-left: 4px solid #2cb34a;
-  background: #addc91;
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-blockquote em,
-blockquote i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 blockquote em,
-.lt-ie9 blockquote i {
-  font-style: normal !important;
-}
-blockquote strong,
-blockquote b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 blockquote strong,
-.lt-ie9 blockquote b {
-  font-weight: normal !important;
 }</code></pre>
           </div>
         </li>
