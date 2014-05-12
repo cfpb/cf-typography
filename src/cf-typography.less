@@ -449,6 +449,40 @@ ul {
 
 
 /* topdoc
+  name: Pull quote
+  family: cf-typography
+  patterns:
+    - name: Default pull quote
+      markup: |
+        <p class="pull-quote">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Cum corrupti tempora nam nihil qui mollitia consectetur
+            corporis nemo culpa dolorum!
+        </p>
+      notes:
+        - "Use a pull quote to highlight excerpts from the current work.
+          This is not to be confused with blockquote which quotes from an
+          external work."
+  tags:
+    - cf-typography
+*/
+
+.pull-quote {
+    .h3();
+
+    & em,
+    & i {
+        .webfont-italic();
+    }
+
+    & strong,
+    & b {
+        .webfont-demi();
+    }
+}
+
+
+/* topdoc
   name: EOF
   eof: true
 */
