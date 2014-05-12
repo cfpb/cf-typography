@@ -142,6 +142,16 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 0;
     .webfont-regular();
+
+    & em,
+    & i {
+        .webfont-italic();
+    }
+
+    & strong,
+    & b {
+        .webfont-demi();
+    }
 }
 
 h1,
@@ -236,6 +246,16 @@ h6,
     margin-bottom: unit( 9px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
     line-height: unit( @line-height / @font-size );
+
+    & em,
+    & i {
+        .webfont-italic();
+    }
+
+    & strong,
+    & b {
+        .webfont-demi();
+    }
 }
 
 
