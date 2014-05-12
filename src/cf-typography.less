@@ -138,10 +138,18 @@ body {
     line-height: @base-line-height;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+.h1 {
+    @font-size: 34px;
+    @line-height: 44px;
+
     margin-top: 0;
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 16px / @font-size, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
     .webfont-regular();
+    line-height: unit( @line-height / @font-size );
 
     & em,
     & i {
@@ -154,28 +162,28 @@ h1, h2, h3, h4, h5, h6,
     }
 }
 
-h1,
-.h1 {
-    @font-size: 34px;
-    @line-height: 44px;
-
-    // Spacing in the design manual is based off of the baseline so this margin
-    // number has been eyeballed to be 30px.
-    margin-bottom: unit( 16px / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: unit( @line-height / @font-size );
-}
-
 h2,
 .h2 {
     @font-size: 26px;
     @line-height: 33px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 20px.
     margin-bottom: unit( 8px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-regular();
     line-height: unit( @line-height / @font-size );
+
+    & em,
+    & i {
+        .webfont-italic();
+    }
+
+    & strong,
+    & b {
+        .webfont-demi();
+    }
 }
 
 h3,
@@ -183,22 +191,35 @@ h3,
     @font-size: 22px;
     @line-height: 28px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-regular();
     line-height: unit( @line-height / @font-size );
+
+    & em,
+    & i {
+        .webfont-italic();
+    }
+
+    & strong,
+    & b {
+        .webfont-demi();
+    }
 }
 
 h4,
 .h4 {
-    .webfont-medium();
     @font-size: 18px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-medium();
     line-height: unit( @base-line-height-px / @font-size );
 }
 
@@ -216,6 +237,7 @@ h5,
 .h5 {
     @font-size: 14px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
@@ -227,6 +249,7 @@ h6,
 .h6 {
     @font-size: 12px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
@@ -237,7 +260,6 @@ h6,
 .superheader {
     // For when you want a heading that's bigger than a normal H1
 
-    .webfont-demi();
     @font-size: 48px;
     @line-height: 66px;
 
@@ -245,17 +267,8 @@ h6,
     // number has been eyeballed to be 30px.
     margin-bottom: unit( 9px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-demi();
     line-height: unit( @line-height / @font-size );
-
-    & em,
-    & i {
-        .webfont-italic();
-    }
-
-    & strong,
-    & b {
-        .webfont-demi();
-    }
 }
 
 
