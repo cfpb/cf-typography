@@ -44,6 +44,7 @@
                 <h3>Licensed webfonts</h3>
                 <ul class="demo_notes">
                   <li>Avenir Next is included via the licensed-fonts.css file. This file contains absolute links to our paid font service. Fonts included this way will only work on CFPB-registered domains.</li>
+                  <li>Note that when using Avenir Regular we automatically fix faux italic and bold issues by overriding i, em, b, and strong tags to use the appropriate fonts.</li>
                 </ul>
               </header>
             </li>
@@ -187,118 +188,95 @@
   line-height: 1.375;
 }
 h1,
-.h1 {
-  margin-top: 0;
-  margin-bottom: 0.47058824em;
-  font-size: 2.125em;
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
   font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  line-height: 1.29411765;
 }
 h1 em,
 .h1 em,
-h1 i,
-.h1 i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 h1 em,
-.lt-ie9 .h1 em,
-.lt-ie9 h1 i,
-.lt-ie9 .h1 i {
-  font-style: normal !important;
-}
-h1 strong,
-.h1 strong,
-h1 b,
-.h1 b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 h1 strong,
-.lt-ie9 .h1 strong,
-.lt-ie9 h1 b,
-.lt-ie9 .h1 b {
-  font-weight: normal !important;
-}
-h2,
-.h2 {
-  margin-top: 0;
-  margin-bottom: 0.30769231em;
-  font-size: 1.625em;
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.26923077;
-}
 h2 em,
 .h2 em,
-h2 i,
-.h2 i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 h2 em,
-.lt-ie9 .h2 em,
-.lt-ie9 h2 i,
-.lt-ie9 .h2 i {
-  font-style: normal !important;
-}
-h2 strong,
-.h2 strong,
-h2 b,
-.h2 b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 h2 strong,
-.lt-ie9 .h2 strong,
-.lt-ie9 h2 b,
-.lt-ie9 .h2 b {
-  font-weight: normal !important;
-}
-h3,
-.h3 {
-  margin-top: 0;
-  margin-bottom: 0.22727273em;
-  font-size: 1.375em;
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.27272727;
-}
 h3 em,
 .h3 em,
+h1 i,
+.h1 i,
+h2 i,
+.h2 i,
 h3 i,
 .h3 i {
   font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
 .lt-ie9 h3 em,
 .lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
 .lt-ie9 h3 i,
 .lt-ie9 .h3 i {
   font-style: normal !important;
 }
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
 h3 strong,
 .h3 strong,
+h1 b,
+.h1 b,
+h2 b,
+.h2 b,
 h3 b,
 .h3 b {
   font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
 .lt-ie9 h3 strong,
 .lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
 .lt-ie9 h3 b,
 .lt-ie9 .h3 b {
   font-weight: normal !important;
+}
+h1,
+.h1 {
+  margin-top: 0;
+  margin-bottom: 0.47058824em;
+  font-size: 2.125em;
+  line-height: 1.29411765;
+}
+h2,
+.h2 {
+  margin-top: 0;
+  margin-bottom: 0.30769231em;
+  font-size: 1.625em;
+  line-height: 1.26923077;
+}
+h3,
+.h3 {
+  margin-top: 0;
+  margin-bottom: 0.22727273em;
+  font-size: 1.375em;
+  line-height: 1.27272727;
 }
 h4,
 .h4 {
@@ -714,12 +692,12 @@ nav a {
           </ul>
           <div class="demo-pattern-css">
             <pre class="css"><code data-language="css">.pull-quote {
-  margin-top: 0;
-  margin-bottom: 0.22727273em;
-  font-size: 1.375em;
   font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.22727273em;
+  font-size: 1.375em;
   line-height: 1.27272727;
 }
 .pull-quote em,

@@ -34,6 +34,9 @@
         - "Avenir Next is included via the licensed-fonts.css file.
           This file contains absolute links to our paid font service.
           Fonts included this way will only work on CFPB-registered domains."
+        - "Note that when using Avenir Regular we automatically fix faux italic
+          and bold issues by overriding i, em, b, and strong tags to use the
+          appropriate fonts."
     - name: Webfont mixins
       codenotes:
         - ".webfont-regular()"
@@ -62,6 +65,16 @@
     font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
+
+    & em,
+    & i {
+        .webfont-italic();
+    }
+
+    & strong,
+    & b {
+        .webfont-demi();
+    }
 }
 
 .webfont-italic() {
@@ -139,6 +152,15 @@ body {
 }
 
 h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    .webfont-regular();
+}
+
+h1,
 .h1 {
     @font-size: 34px;
     @line-height: 44px;
@@ -148,18 +170,7 @@ h1,
     // number has been eyeballed to be 30px.
     margin-bottom: unit( 16px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    .webfont-regular();
     line-height: unit( @line-height / @font-size );
-
-    & em,
-    & i {
-        .webfont-italic();
-    }
-
-    & strong,
-    & b {
-        .webfont-demi();
-    }
 }
 
 h2,
@@ -172,18 +183,7 @@ h2,
     // number has been eyeballed to be 20px.
     margin-bottom: unit( 8px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    .webfont-regular();
     line-height: unit( @line-height / @font-size );
-
-    & em,
-    & i {
-        .webfont-italic();
-    }
-
-    & strong,
-    & b {
-        .webfont-demi();
-    }
 }
 
 h3,
@@ -196,18 +196,7 @@ h3,
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
-    .webfont-regular();
     line-height: unit( @line-height / @font-size );
-
-    & em,
-    & i {
-        .webfont-italic();
-    }
-
-    & strong,
-    & b {
-        .webfont-demi();
-    }
 }
 
 h4,
