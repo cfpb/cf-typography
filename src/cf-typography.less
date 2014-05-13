@@ -34,6 +34,9 @@
         - "Avenir Next is included via the licensed-fonts.css file.
           This file contains absolute links to our paid font service.
           Fonts included this way will only work on CFPB-registered domains."
+        - "Note that when using Avenir Regular we automatically fix faux italic
+          and bold issues by overriding i, em, b, and strong tags to use the
+          appropriate fonts."
     - name: Webfont mixins
       codenotes:
         - ".webfont-regular()"
@@ -54,10 +57,6 @@
           mixins so you get them automatically. Note that this requires you to
           use conditional classes on the <html> element:
           https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes."
-      markup: |
-        <blockquote cite="http://cfpb.github.io/cf-typography/docs/index.html#webfont-notes">
-            Any instances of Avenir Next getting <em>italic</em><i>ized</i> or <strong>bold</strong><b>ed</b> must be declared explicitly ...
-        </blockquote>
   tags:
     - cf-typography
 */
@@ -66,6 +65,16 @@
     font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
+
+    & em,
+    & i {
+        .webfont-italic();
+    }
+
+    & strong,
+    & b {
+        .webfont-demi();
+    }
 }
 
 .webfont-italic() {
@@ -142,9 +151,12 @@ body {
     line-height: @base-line-height;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    margin-top: 0;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
     .webfont-regular();
 }
 
@@ -153,6 +165,7 @@ h1,
     @font-size: 34px;
     @line-height: 44px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 30px.
     margin-bottom: unit( 16px / @font-size, em );
@@ -165,6 +178,7 @@ h2,
     @font-size: 26px;
     @line-height: 33px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 20px.
     margin-bottom: unit( 8px / @font-size, em );
@@ -177,6 +191,7 @@ h3,
     @font-size: 22px;
     @line-height: 28px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
@@ -186,13 +201,14 @@ h3,
 
 h4,
 .h4 {
-    .webfont-medium();
     @font-size: 18px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-medium();
     line-height: unit( @base-line-height-px / @font-size );
 }
 
@@ -210,6 +226,7 @@ h5,
 .h5 {
     @font-size: 14px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
@@ -221,6 +238,7 @@ h6,
 .h6 {
     @font-size: 12px;
 
+    margin-top: 0;
     // Spacing in the design manual is based off of the baseline so this margin
     // number has been eyeballed to be 15px.
     margin-bottom: unit( 5px / @font-size, em );
@@ -231,7 +249,6 @@ h6,
 .superheader {
     // For when you want a heading that's bigger than a normal H1
 
-    .webfont-demi();
     @font-size: 48px;
     @line-height: 66px;
 
@@ -239,6 +256,7 @@ h6,
     // number has been eyeballed to be 30px.
     margin-bottom: unit( 9px / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-demi();
     line-height: unit( @line-height / @font-size );
 }
 
@@ -413,37 +431,6 @@ nav a {
 
 
 /* topdoc
-  name: Blockquote
-  family: cf-typography
-  patterns:
-    - name: Default blockquote
-      markup: |
-        <blockquote>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi animi facere modi eaque amet odio!
-        </blockquote> 
-  tags:
-    - cf-typography
-*/
-
-blockquote {
-    padding: 0.5em 0.75em;
-    border-left: 4px solid @green;
-    background: @green-midtone;
-    .webfont-regular();
-
-    & em,
-    & i {
-        .webfont-italic();
-    }
-
-    & strong,
-    & b {
-        .webfont-demi();
-    }
-}
-
-
-/* topdoc
   name: Lists
   family: cf-typography
   patterns:
@@ -460,6 +447,57 @@ blockquote {
 
 ul {
     list-style: square;
+}
+
+
+/* topdoc
+  name: Block quote
+  family: cf-typography
+  patterns:
+    - name: Default block quote
+      markup: |
+        <blockquote cite="link-to-source">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+            similique fugit hic eligendi praesentium officiis illum optio iusto
+            commodi eum tempore nisi ad in perferendis enim quo dolores.
+            Reprehenderit similique earum quibusdam possimus vitae esse
+            nesciunt mollitia sed beatae aliquid dolores iure a impedit quam
+            minus eum modi illum ducimus eligendi eveniet labore non sequi
+            voluptate et totam praesentium animi itaque asperiores dolorum
+            sunt laudantium repellat nam commodi. Perspiciatis natus aliquam
+            veniam officiis ducimus voluptatum ut necessitatibus non!
+        </blockquote>
+      notes:
+        - "Use a block quote to quote from an external work. See .pull-quote if
+          you need to highlight an excerpt from the current work."
+        - "It is best practice to document the URL of a quoted work using the
+          cite attribute."
+  tags:
+    - cf-typography
+*/
+
+
+/* topdoc
+  name: Pull quote
+  family: cf-typography
+  patterns:
+    - name: Default pull quote
+      markup: |
+        <p class="pull-quote">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Cum corrupti tempora nam nihil qui mollitia consectetur
+            corporis nemo culpa dolorum!
+        </p>
+      notes:
+        - "Use a pull quote to highlight excerpts from the current work.
+          This is not to be confused with blockquote which quotes from an
+          external work."
+  tags:
+    - cf-typography
+*/
+
+.pull-quote {
+    .h3();
 }
 
 
