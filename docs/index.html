@@ -678,26 +678,41 @@ nav a {
                 <h3>Default pull quote</h3>
                 <ul class="demo_notes">
                   <li>Use a pull quote to highlight excerpts from the current work. This is not to be confused with blockquote which quotes from an external work.</li>
+                  <li>Since a pull quote is an excerpt and repeats content from the article it's contained within you should use the aside element.</li>
                 </ul>
               </header>
               <section>
-<p class="pull-quote">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Cum corrupti tempora nam nihil qui mollitia consectetur
-    corporis nemo culpa dolorum!
-</p>
+<aside class="pull-quote">
+    <div class="pull-quote_body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Cum corrupti tempora nam nihil qui mollitia consectetur
+        corporis nemo culpa dolorum!
+    </div>
+    <footer>
+        <cite class="pull-quote_citation">
+            - Author Name
+        </cite>
+    <footer>
+</aside>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;p class=&quot;pull-quote&quot;&gt;
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Cum corrupti tempora nam nihil qui mollitia consectetur
-    corporis nemo culpa dolorum!
-&lt;/p&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;aside class=&quot;pull-quote&quot;&gt;
+    &lt;div class=&quot;pull-quote_body&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Cum corrupti tempora nam nihil qui mollitia consectetur
+        corporis nemo culpa dolorum!
+    &lt;/div&gt;
+    &lt;footer&gt;
+        &lt;cite class=&quot;pull-quote_citation&quot;&gt;
+            - Author Name
+        &lt;/cite&gt;
+    &lt;footer&gt;
+&lt;/aside&gt;</code></pre>
               </footer>
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.pull-quote {
+            <pre class="css"><code data-language="css">.pull-quote_body {
   font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -705,25 +720,42 @@ nav a {
   margin-bottom: 0.22727273em;
   font-size: 1.375em;
   line-height: 1.27272727;
+  margin-bottom: 0.54545455em;
+  color: #101820;
 }
-.pull-quote em,
-.pull-quote i {
+.pull-quote_body em,
+.pull-quote_body i {
   font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
   font-style: italic;
   font-weight: normal;
 }
-.lt-ie9 .pull-quote em,
-.lt-ie9 .pull-quote i {
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
   font-style: normal !important;
 }
-.pull-quote strong,
-.pull-quote b {
+.pull-quote_body strong,
+.pull-quote_body b {
   font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
 }
-.lt-ie9 .pull-quote strong,
-.lt-ie9 .pull-quote b {
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_citation {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+  color: #75787b;
+}
+.lt-ie9 .pull-quote_citation {
   font-weight: normal !important;
 }</code></pre>
           </div>
