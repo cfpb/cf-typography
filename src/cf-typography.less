@@ -476,6 +476,11 @@ ul {
     - cf-typography
 */
 
+blockquote {
+    margin-top: unit(40px / @base-font-size-px, em);
+    margin-bottom: unit(40px / @base-font-size-px, em);
+}
+
 
 /* topdoc
   name: Pull quote
@@ -483,21 +488,42 @@ ul {
   patterns:
     - name: Default pull quote
       markup: |
-        <p class="pull-quote">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Cum corrupti tempora nam nihil qui mollitia consectetur
-            corporis nemo culpa dolorum!
-        </p>
+        <aside class="pull-quote">
+            <div class="pull-quote_body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cum corrupti tempora nam nihil qui mollitia consectetur
+                corporis nemo culpa dolorum!
+            </div>
+            <footer>
+                <cite class="pull-quote_citation">
+                    - Author Name
+                </cite>
+            <footer>
+        </aside>
       notes:
         - "Use a pull quote to highlight excerpts from the current work.
           This is not to be confused with blockquote which quotes from an
           external work."
+        - "Since a pull quote is an excerpt and repeats content from the
+          article it's contained within you should use the aside element."
   tags:
     - cf-typography
 */
 
 .pull-quote {
-    .h3();
+
+    &_body {
+        .h3();
+        // Spacing is based off of the baseline so this margin number has been
+        // eyeballed to be ~24px.
+        margin-bottom: unit(12px / @font-size, em);
+        color: @black;
+    }
+
+    &_citation {
+        .h5();
+        color: @gray;
+    }
 }
 
 
