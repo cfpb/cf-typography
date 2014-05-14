@@ -280,7 +280,6 @@ ul,
 ol,
 dl,
 table,
-blockquote,
 figure {
     margin-top: 0;
     // Spacing has been eyeballed to be 30px from the baseline.
@@ -476,8 +475,13 @@ ul {
 */
 
 blockquote {
-    margin-top: unit(40px / @base-font-size-px, em);
-    margin-bottom: unit(40px / @base-font-size-px, em);
+    // Vertical spacing has been eyeballed to be 30px from the baseline.
+    margin: unit(20px / @base-font-size-px, em);
+
+    @media only all and (min-width: (unit(600px / @base-font-size-px, em))) {
+        margin: unit(28px / @base-font-size-px, em)
+                unit(40px / @base-font-size-px, em);
+    }
 }
 
 
