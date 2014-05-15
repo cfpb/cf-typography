@@ -1,6 +1,6 @@
 {
   "name": "cf-typography",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Basic typography styling, including heading hierarchy, links, and some handy webfont mixins for Capital Framework.",
   "keywords": [
     "capital-framework",
