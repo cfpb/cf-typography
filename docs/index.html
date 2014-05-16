@@ -713,6 +713,39 @@ nav a {
 &lt;/aside&gt;</code></pre>
               </footer>
             </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Large pull quote</h3>
+              </header>
+              <section>
+<aside class="pull-quote pull-quote__large">
+    <div class="pull-quote_body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Cum corrupti tempora nam nihil qui mollitia consectetur
+        corporis nemo culpa dolorum!
+    </div>
+    <footer>
+        <cite class="pull-quote_citation">
+            - Author Name
+        </cite>
+    <footer>
+</aside>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;aside class=&quot;pull-quote pull-quote__large&quot;&gt;
+    &lt;div class=&quot;pull-quote_body&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Cum corrupti tempora nam nihil qui mollitia consectetur
+        corporis nemo culpa dolorum!
+    &lt;/div&gt;
+    &lt;footer&gt;
+        &lt;cite class=&quot;pull-quote_citation&quot;&gt;
+            - Author Name
+        &lt;/cite&gt;
+    &lt;footer&gt;
+&lt;/aside&gt;</code></pre>
+              </footer>
+            </li>
           </ul>
           <div class="demo-pattern-css">
             <pre class="css"><code data-language="css">.pull-quote_body {
@@ -759,6 +792,36 @@ nav a {
   color: #75787b;
 }
 .lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body {
+  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.30769231em;
+  font-size: 1.625em;
+  line-height: 1.26923077;
+  margin-bottom: 0.46153846em;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
   font-weight: normal !important;
 }</code></pre>
           </div>
