@@ -1,7 +1,7 @@
 {
   "name": "cf-typography",
   "version": "0.6.0",
-  "description": "Basic typography styling, including heading hierarchy, links, and some handy webfont mixins for Capital Framework.",
+  "description": "Typographic patterns for Capital Framework, including lists, links, and headers.",
   "keywords": [
     "capital-framework",
     "capital",
@@ -23,9 +23,7 @@
   "main": "src/cf-typography.less",
   "dependencies": {
     "cf-core": "latest",
-    "cf-icons": "latest",
-    "normalize-css": "~3.0.0",
-    "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
+    "cf-icons": "latest"
   },
   "exportsOverride": {
     "cf-*": {
