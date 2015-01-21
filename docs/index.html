@@ -23,6 +23,53 @@
           <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-typography docs
           </h1><a href="https://github.com/cfpb/cf-typography" class="docs-repo">view the repository</a>
         </div>
+        <div id="theme-variables" class="docs-component">
+          <h2 class="docs-component_header"><span>Theme variables</span></h2>
+          <div class="docs-component_intro">
+            <ul class="docs-notes">
+              <li>The following color and sizing variables are exposed, allowing you to easily override them before compiling.</li>
+            </ul>
+          </div>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Colors</h3>
+              <footer class="docs-pattern_footer">
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>@pull-quote_body
+@pull-quote_citation
+@micro-copy-text
+@date-text
+@category-slug-text
+@category-slug-hover
+@header-slug-thin-border
+@header-slug-thick-border
+@padded-header-text
+@padded-header-bg
+@padded-header-border
+@fancy-slug-text
+@fancy-slug-bg
+@fancy-slug-border
+@meta-header-border
+@jump-link__bg
+@jump-link__bg-border
+@list__branded-bullet</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Sizing</h3>
+              <footer class="docs-pattern_footer">
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>@...</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+          </div>
+        </div>
         <div id="pull-quote" class="docs-component">
           <h2 class="docs-component_header"><span>Pull quote</span></h2>
           <div class="docs-patterns">
@@ -113,7 +160,7 @@
   font-size: 1.375em;
   line-height: 1.27272727;
   margin-bottom: 0.54545455em;
-  color: #101820;
+  color: #895983;
 }
 .pull-quote_body em,
 .pull-quote_body i {
@@ -159,7 +206,7 @@
   margin-bottom: 0.35714286em;
   font-size: 0.875em;
   line-height: 1.57142857;
-  color: #75787b;
+  color: #ad81a8;
 }
 .lt-ie9 .pull-quote_citation {
   font-weight: normal !important;
@@ -293,7 +340,7 @@
           </div>
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">.micro-copy {
-  color: #75787b;
+  color: #ad81a8;
   font-size: 0.875em;
   font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
   font-style: normal;
@@ -430,7 +477,7 @@
   margin-bottom: 0.35714286em;
   font-size: 0.875em;
   line-height: 1.57142857;
-  color: #75787b;
+  color: #ad81a8;
   white-space: nowrap;
 }
 .lt-ie9 .date {
@@ -487,34 +534,34 @@
   line-height: 1.22222222;
   display: inline-block;
   margin-bottom: 0.44444444em;
-  color: #101820;
+  color: #5b3b57;
 }
 .lt-ie9 .category-slug {
   font-weight: normal !important;
 }
 a.category-slug {
-  color: #101820;
-  border-color: #101820;
+  color: #5b3b57;
+  border-color: #5b3b57;
 }
 a.category-slug:visited,
 a.category-slug.visited {
-  border-color: #101820;
-  color: #101820;
+  border-color: #5b3b57;
+  color: #5b3b57;
 }
 a.category-slug:hover,
 a.category-slug.hover {
-  border-color: #328ed8;
-  color: #328ed8;
+  border-color: #c7336e;
+  color: #c7336e;
 }
 a.category-slug:focus,
 a.category-slug.focus {
-  border-color: #328ed8;
-  color: #328ed8;
+  border-color: #c7336e;
+  color: #c7336e;
 }
 a.category-slug:active,
 a.category-slug.active {
-  border-color: #101820;
-  color: #101820;
+  border-color: #5b3b57;
+  color: #5b3b57;
 }
 .category-slug_icon {
   margin-right: 0.11111111em;
@@ -567,7 +614,7 @@ a.category-slug.active {
   font-size: 0.875em;
   line-height: 1.57142857;
   margin-bottom: 1.21428571em;
-  border-top: 1px solid #e3e4e5;
+  border-top: 1px solid #c7336e;
 }
 .lt-ie9 .header-slug {
   font-weight: normal !important;
@@ -576,7 +623,7 @@ a.category-slug.active {
   display: inline-block;
   padding-top: 0.28571429em;
   margin-top: -3px;
-  border-top: 5px solid #2cb34a;
+  border-top: 5px solid #3a8899;
 }</code></pre>
           </div>
         </div>
@@ -620,9 +667,9 @@ a.category-slug.active {
   line-height: 1.57142857;
   padding: 0.57142857em 0.71428571em;
   margin-bottom: 0;
-  border-bottom: 1px solid #babbbd;
-  background: #f1f2f2;
-  color: #43484e;
+  border-bottom: 1px solid #5b3b57;
+  background: #eee4ed;
+  color: #5b3b57;
 }
 .lt-ie9 .padded-header {
   font-weight: normal !important;
@@ -685,7 +732,7 @@ a.category-slug.active {
   padding: 0 1.21428571em;
   margin-top: 1.14285714em;
   margin-bottom: 0.57142857em;
-  border-top: 1px solid #babbbd;
+  border-top: 1px solid #905c8a;
   line-height: 1;
   text-align: center;
 }
@@ -697,8 +744,8 @@ a.category-slug.active {
   position: relative;
   top: -1.14285714em;
   padding: 0.57142857em 1.42857143em;
-  border: 1px solid #babbbd;
-  background: #ffffff;
+  border: 1px solid #905c8a;
+  background: #eee4ed;
 }
 .fancy-slug_ribbon-left,
 .fancy-slug_ribbon-right {
@@ -707,8 +754,8 @@ a.category-slug.active {
   top: -1px;
   width: 1.21428571em;
   height: 100%;
-  border-top: 1px solid #babbbd;
-  border-bottom: 1px solid #babbbd;
+  border-top: 1px solid #905c8a;
+  border-bottom: 1px solid #905c8a;
 }
 .lt-ie9 .fancy-slug_ribbon-left,
 .lt-ie9 .fancy-slug_ribbon-right {
@@ -724,8 +771,8 @@ a.category-slug.active {
   z-index: 3;
   width: 1.21428571em;
   height: 50%;
-  background: #ffffff;
-  border: 0 solid #babbbd;
+  background: #eee4ed;
+  border: 0 solid #905c8a;
 }
 .fancy-slug_ribbon-left {
   left: -1.21428571em;
@@ -873,7 +920,7 @@ a.category-slug.active {
             <pre class="docs-code"><code data-language="css">.meta-header {
   padding-bottom: 0.5em;
   margin-bottom: 0.625em;
-  border-bottom: 1px solid #babbbd;
+  border-bottom: 1px solid #905c8a;
 }
 .meta-header_left {
   margin-bottom: 0;
@@ -1326,7 +1373,7 @@ a.category-slug.active {
     box-sizing: border-box;
     display: block;
     padding: 0.625em 1.25em 0.625em 0;
-    border: dotted #0072ce;
+    border: dotted #ffffff;
     border-width: 1px 0;
     margin-right: 0;
     width: 100%;
@@ -1352,8 +1399,8 @@ a.category-slug.active {
     border-bottom-width: 0;
   }
   .jump-link__bg {
-    background: #f1f2f2;
-    border: solid #e3e4e5;
+    background: #eee4ed;
+    border: solid #905c8a;
     border-width: 1px 0;
     padding: 0.625em 1.25em 0.625em 1em;
   }
@@ -1404,7 +1451,7 @@ a.category-slug.active {
   box-sizing: border-box;
   display: block;
   padding: 0.625em 1.25em 0.625em 0;
-  border: dotted #0072ce;
+  border: dotted #ffffff;
   border-width: 1px 0;
   margin-right: 0;
   width: 100%;
@@ -1696,8 +1743,8 @@ a.category-slug.active {
                 <ul class="docs-notes">
                   <li>Displays custom bullets to the left of specified elements as :before pseudo elements.</li>
                   <li>To use, pass this mixin values for the bullet to be displayed: text, color, font size, and offset (distance away from the parent element the bullet should appear).  Font family parameter is optional and defaults to inherited.</li>
-                  <li>The default implementation absolutely positions bullets outside of their parent's flow, so they will not receive certain properties applied to the parent  (borders, text-decoration, etc). If you want bullets to receive these properties, pass the @type parameter  with value `relative`. This will position the bullets relatively instead of absolutely so they will remain within their parent's flow.</li>
-                  <li>By default, bullets hang outside of their parent's content box. If you want the bullets to align with the left boundary of the parent's content box, give the parent a left margin value equal to the offset.</li>
+                  <li>Bullets are absolutely positioned outside of their parent's flow, so they will not receive certain properties applied to the parent  (borders, text-decoration, etc).</li>
+                  <li>By default, custom bullets hang outside of their parent's content box  (in the margin or padding if there is any). If you want the bullets to align  with the left boundary of the parent's content box, give the parent a  left margin value equal to the offset.</li>
                 </ul>
               </footer>
             </div>
@@ -1732,7 +1779,7 @@ a.category-slug.active {
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>List that uses brand font and custom main-brand-color square bullets.</li>
+                  <li>Uses .custom-bullet mixin to generate custom main-brand-color square bullets.</li>
                 </ul>
               </footer>
             </div>
@@ -1774,41 +1821,13 @@ a.category-slug.active {
 .lt-ie9 .list__branded .list_item b {
   font-weight: normal !important;
 }
-.list__branded li .bullet,
-.list__branded .list_item .bullet {
-  list-style-type: none;
-  position: relative;
-}
-.list__branded li .bullet:before,
-.list__branded .list_item .bullet:before {
-  content: &quot;\25AA&quot;;
-  font-family: inherit;
-  font-size: 1.375em;
-  color: #2cb34a;
-  line-height: 1;
-  width: 1em;
-  display: inline-block;
-}
-.lt-ie8 .list__branded li .bullet:before,
-.lt-ie8 .list__branded .list_item .bullet:before {
-  display: inline;
-}
 .list__branded li:before,
 .list__branded .list_item:before {
   content: &quot;\25AA&quot;;
   font-family: inherit;
   font-size: 1.375em;
-  color: #2cb34a;
+  color: #3a8899;
   line-height: 1;
-  width: 1em;
-  display: inline-block;
-}
-.lt-ie8 .list__branded li:before,
-.lt-ie8 .list__branded .list_item:before {
-  display: inline;
-}
-.list__branded li:before,
-.list__branded .list_item:before {
   position: absolute;
   left: -0.86363636em;
 }</code></pre>

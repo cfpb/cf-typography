@@ -3,6 +3,85 @@
    Advanced Typography
    ========================================================================== */
 
+
+/* topdoc
+  name: Theme variables
+  family: cf-typography
+  notes:
+    - "The following color and sizing variables are exposed, allowing you to
+       easily override them before compiling."
+  patterns:
+  - name: Colors
+    codenotes:
+      - |
+        @pull-quote_body
+        @pull-quote_citation
+        @micro-copy-text
+        @date-text
+        @category-slug-text
+        @category-slug-hover
+        @header-slug-thin-border
+        @header-slug-thick-border
+        @padded-header-text
+        @padded-header-bg
+        @padded-header-border
+        @fancy-slug-text
+        @fancy-slug-bg
+        @fancy-slug-border
+        @meta-header-border
+        @jump-link__bg
+        @jump-link__bg-border
+        @list__branded-bullet
+  - name: Sizing
+    codenotes:
+      - |
+        @...
+  tags:
+  - cf-typography
+  - less
+*/
+
+// Color variables
+
+// .pull-quote
+@pull-quote_body:               #895983;
+@pull-quote_citation:           lighten(#895983, 15%);
+
+// .micro-copy
+@micro-copy-text:               lighten(#895983, 15%);
+
+// .date
+@date-text:                     lighten(#895983, 15%);
+
+// .category-slug
+@category-slug-text:            darken(#895983, 15%);
+@category-slug-hover:           #c7336e;
+
+// .header-slug
+@header-slug-thin-border:       #c7336e;
+@header-slug-thick-border:      #3a8899;
+
+// .padded-header
+@padded-header-text:            darken(#895983, 15%);
+@padded-header-bg:              lighten(#905c8a, 45%);
+@padded-header-border:          darken(#895983, 15%);
+
+// .fancy-slug
+@fancy-slug-text:               #905c8a;
+@fancy-slug-bg:                 lighten(#905c8a, 45%);
+@fancy-slug-border:             #905c8a;
+
+// .meta-header
+@meta-header-border:            #905c8a;
+
+// .jump-link
+@jump-link__bg:                 lighten(#905c8a, 45%);
+@jump-link__bg-border:          #905c8a;
+
+// .list__branded
+@list__branded-bullet:          #3a8899;
+
+
 /* topdoc
  name: Pull quote
  family: cf-typography
@@ -52,12 +131,12 @@
        // Spacing is based off of the baseline so this margin number has been
        // eyeballed to be ~24px.
        margin-bottom: unit(12px / @font-size, em);
-       color: @black;
+       color: @pull-quote_body;
    }
 
    &_citation {
        .h5();
-       color: @gray;
+       color: @pull-quote_citation;
    }
 }
 
@@ -95,7 +174,7 @@
 */
 
 .micro-copy {
-    color: @gray;
+    color: @micro-copy-text;
     font-size: unit(14px / @base-font-size-px, em);
     .webfont-regular();
 
@@ -147,7 +226,7 @@
 
 .date {
     .h5();
-    color: @gray;
+    color: @date-text;
     white-space: nowrap;
 }
 
@@ -182,10 +261,10 @@
     display: inline-block;
     // Eyeballed to 20px over h2.
     margin-bottom: unit(8px / @font-size, em);
-    color: @black;
+    color: @category-slug-text;
 
     a& {
-        .u-link__colors(@black, @pacific-80);
+        .u-link__colors(@category-slug-text, @category-slug-hover);
     }
 
     &_icon {
@@ -218,13 +297,13 @@
 .header-slug {
     .h5();
     margin-bottom: unit(17px / @font-size, em);
-    border-top: 1px solid @gray-20;
+    border-top: 1px solid @header-slug-thin-border;
 
     &_inner {
         display: inline-block;
         padding-top: unit(4px / @font-size, em);
         margin-top: -3px;
-        border-top: 5px solid @green;
+        border-top: 5px solid @header-slug-thick-border;
     }
 }
 
@@ -250,9 +329,9 @@
     padding: unit(8px / @font-size, em)
              unit(10px / @font-size, em);
     margin-bottom: 0;
-    border-bottom: 1px solid @gray-50;
-    background: @gray-10;
-    color: @darkgray;
+    border-bottom: 1px solid @padded-header-border;
+    background: @padded-header-bg;
+    color: @padded-header-text;
 }
 
 /* topdoc
@@ -295,7 +374,7 @@
     margin-top: unit(((@font-size / 2) + @v-padding + 1) / @font-size, em);
     // Bottom margin is eyeballed to 15px when considering baseline and line-height.
     margin-bottom: unit(8px / @font-size, em);
-    border-top: 1px solid @gray-50;
+    border-top: 1px solid @fancy-slug-border;
     line-height: 1;
     text-align: center;
 
@@ -307,8 +386,8 @@
         // font-size plus half the total padding and half the borders.
         top: unit(((@font-size / 2) + @v-padding + 1) * -1 / @font-size, em);
         padding: unit(@v-padding / @font-size, em) unit(20px / @font-size, em);
-        border: 1px solid @gray-50;
-        background: @white;
+        border: 1px solid @fancy-slug-border;
+        background: @fancy-slug-bg;
     }
 
     // Use :before as the top corner and :after as the bottom corner.
@@ -319,8 +398,8 @@
         top: -1px;
         width: unit(@ribbon-width / @font-size, em);
         height: 100%;
-        border-top: 1px solid @gray-50;
-        border-bottom: 1px solid @gray-50;
+        border-top: 1px solid @fancy-slug-border;
+        border-bottom: 1px solid @fancy-slug-border;
 
         .lt-ie9 & {
             display: none;
@@ -334,8 +413,8 @@
                 z-index: 3;
                 width: unit(@ribbon-width / @font-size, em);
                 height: 50%;
-                background: @white;
-                border: 0 solid @gray-50;
+                background: @fancy-slug-bg;
+                border: 0 solid @fancy-slug-border;
         }
     }
 
@@ -430,7 +509,7 @@
 .meta-header {
     padding-bottom: unit(8px / @base-font-size-px, em);
     margin-bottom: unit(10px / @base-font-size-px, em);
-    border-bottom: 1px solid @gray-50;
+    border-bottom: 1px solid @meta-header-border;
 }
 
 .meta-header_left {
@@ -709,8 +788,8 @@
         }
 
         &__bg {
-            background: @gray-10;
-            border: solid @gray-20;
+            background: @jump-link__bg;
+            border: solid @jump-link__bg-border;
             border-width: 1px 0;
             padding: unit(10px / @base-font-size-px, em) 1.25em unit(10px / @base-font-size-px, em) 1em;
             &:after {
@@ -745,10 +824,11 @@
 */
 
 .block-link {
+    @link-text: #fff;
     box-sizing: border-box;
     display: block;
     padding: unit(10px / @base-font-size-px, em) 1.25em unit(10px / @base-font-size-px, em) 0;
-    border: dotted @pacific;
+    border: dotted @link-text;
     border-width: 1px 0;
     margin-right: 0;
     // 100% width is needed when .jump-link is applied to a <button>.
@@ -989,7 +1069,7 @@
         @offset: unit(19px / @font-size, em);
         @size: unit(22px / @base-font-size-px, em);
         .webfont-regular();
-        .custom-bullet(@text:"\25AA", @color: @green, @offset: @offset, @size: @size);
+        .custom-bullet(@text:"\25AA", @color: @list__branded-bullet, @offset: @offset, @size: @size);
     }
 }
 
