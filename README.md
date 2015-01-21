@@ -1,15 +1,11 @@
 # cf-typography
 
-[![Bower dependency status](https://www.versioneye.com/user/projects/533069907bae4b78ef00000b/badge.png)](https://www.versioneye.com/user/projects/533069907bae4b78ef00000b)
 [![npm dependency status](https://gemnasium.com/cfpb/cf-typography.svg)](https://gemnasium.com/cfpb/cf-typography)
 
 Advanced typographic patterns, including lists, links, and headers.
 This component can be used by itself, but it was made for Capital Framework,
 a new front end framework developed at the
 [Consumer Financial Protection Bureau](https://cfpb.github.io/).
-
-If you would like to take advantage of more components or if you're new to
-Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
 
 - [View the docs](https://cfpb.github.io/cf-typography/docs/)
 - [See the raw demo](https://cfpb.github.io/cf-typography/demo/)
@@ -21,6 +17,8 @@ Release notes are recorded on the
 
 If you would like to take advantage of more components or if you're new to
 Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
+
+![](screenshot.png)
 
 
 ## How to use this component
@@ -50,4 +48,3 @@ We welcome your feedback and contributions.
 ## Credits and references
 
 Docs and demo built with the excellent [Topdoc](https://github.com/topcoat/topdoc/).
-
