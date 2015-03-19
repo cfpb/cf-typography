@@ -1729,6 +1729,155 @@ a.category-slug.active {
 }</code></pre>
           </div>
         </div>
+        <div id="link-list-modifier" class="docs-component">
+          <h2 class="docs-component_header"><span>Link list modifier</span></h2>
+          <div class="docs-component_intro">
+            <ul class="docs-notes">
+              <li>The link list modifier is intended to be used for lists where each item is a link. It converts to a finger-friendly link with a large tap area on smaller screens.</li>
+            </ul>
+          </div>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Default example</h3>
+              <section class="docs-pattern_pattern">
+<ul class="list list__links">
+    <li class="list_item">
+        <a class="list_link" href="#">List item 1</a>
+    </li>
+    <li class="list_item">
+        <a class="list_link" href="#">List item 2</a>
+    </li>
+    <li class="list_item">
+        <a class="list_link" href="#">List item 3</a>
+    </li>
+</ul>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;ul class=&quot;list list__links&quot;&gt;
+    &lt;li class=&quot;list_item&quot;&gt;
+        &lt;a class=&quot;list_link&quot; href=&quot;#&quot;&gt;List item 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;list_item&quot;&gt;
+        &lt;a class=&quot;list_link&quot; href=&quot;#&quot;&gt;List item 2&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;list_item&quot;&gt;
+        &lt;a class=&quot;list_link&quot; href=&quot;#&quot;&gt;List item 3&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-typography/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;ul class=\&amp;quot;list list__links\&amp;quot;&gt;\n    &lt;li class=\&amp;quot;list_item\&amp;quot;&gt;\n        &lt;a class=\&amp;quot;list_link\&amp;quot; href=\&amp;quot;#\&amp;quot;&gt;List item 1&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li class=\&amp;quot;list_item\&amp;quot;&gt;\n        &lt;a class=\&amp;quot;list_link\&amp;quot; href=\&amp;quot;#\&amp;quot;&gt;List item 2&lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li class=\&amp;quot;list_item\&amp;quot;&gt;\n        &lt;a class=\&amp;quot;list_link\&amp;quot; href=\&amp;quot;#\&amp;quot;&gt;List item 3&lt;/a&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Link list with icons</h3>
+              <section class="docs-pattern_pattern">
+<ul class="list list__links list__icons">
+    <li class="list_item">
+        <a class="list_link icon-link icon-link__before icon-link__email"
+           href="#">
+            <span class="icon-link_text">List item 1</span>
+        </a>
+    </li>
+    <li class="list_item">
+        <a class="list_link icon-link icon-link__before icon-link__phone"
+           href="#">
+            <span class="icon-link_text">List item 2</span>
+        </a>
+    </li>
+    <li class="list_item">
+        <a class="list_link icon-link icon-link__before icon-link__fax"
+           href="#">
+            <span class="icon-link_text">List item 3</span>
+        </a>
+    </li>
+</ul>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;ul class=&quot;list list__links list__icons&quot;&gt;
+    &lt;li class=&quot;list_item&quot;&gt;
+        &lt;a class=&quot;list_link icon-link icon-link__before icon-link__email&quot;
+           href=&quot;#&quot;&gt;
+            &lt;span class=&quot;icon-link_text&quot;&gt;List item 1&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;list_item&quot;&gt;
+        &lt;a class=&quot;list_link icon-link icon-link__before icon-link__phone&quot;
+           href=&quot;#&quot;&gt;
+            &lt;span class=&quot;icon-link_text&quot;&gt;List item 2&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;list_item&quot;&gt;
+        &lt;a class=&quot;list_link icon-link icon-link__before icon-link__fax&quot;
+           href=&quot;#&quot;&gt;
+            &lt;span class=&quot;icon-link_text&quot;&gt;List item 3&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-typography/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;ul class=\&amp;quot;list list__links list__icons\&amp;quot;&gt;\n    &lt;li class=\&amp;quot;list_item\&amp;quot;&gt;\n        &lt;a class=\&amp;quot;list_link icon-link icon-link__before icon-link__email\&amp;quot;\n           href=\&amp;quot;#\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;icon-link_text\&amp;quot;&gt;List item 1&lt;/span&gt;\n        &lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li class=\&amp;quot;list_item\&amp;quot;&gt;\n        &lt;a class=\&amp;quot;list_link icon-link icon-link__before icon-link__phone\&amp;quot;\n           href=\&amp;quot;#\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;icon-link_text\&amp;quot;&gt;List item 2&lt;/span&gt;\n        &lt;/a&gt;\n    &lt;/li&gt;\n    &lt;li class=\&amp;quot;list_item\&amp;quot;&gt;\n        &lt;a class=\&amp;quot;list_link icon-link icon-link__before icon-link__fax\&amp;quot;\n           href=\&amp;quot;#\&amp;quot;&gt;\n            &lt;span class=\&amp;quot;icon-link_text\&amp;quot;&gt;List item 3&lt;/span&gt;\n        &lt;/a&gt;\n    &lt;/li&gt;\n&lt;/ul&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+              </footer>
+            </div>
+          </div>
+          <div class="docs-css">
+            <pre class="docs-code"><code data-language="css">.list__links {
+  padding-left: 0;
+  list-style-type: none;
+}
+.list__links .list_item {
+  margin-left: 0;
+}
+.list__links .list_item {
+  margin-bottom: 0.625em;
+}
+@media only all and (max-width: 37.4375em) {
+  .list__links .list_item {
+    margin-bottom: -1px;
+  }
+}
+.list__links.list__spaced .list_item + .list_item {
+  margin-top: 0;
+}
+@media only all and (max-width: 37.4375em) {
+  .list__links .list_link {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    padding: 0.625em 1.25em 0.625em 0;
+    border: dotted #ffffff;
+    border-width: 1px 0;
+    margin-right: 0;
+    width: 100%;
+    text-align: left;
+  }
+  .list__links .list_link.icon-link:after {
+    position: absolute;
+    margin-bottom: -0.625em;
+    right: 0;
+    bottom: 50%;
+    text-align: right;
+  }
+  .list__links .list_link .icon-link_text {
+    border-bottom-width: 0;
+  }
+}
+.list__links.list__icons .list_link {
+  position: relative;
+  left: -0.125em;
+}
+.list__links.list__icons .icon-link:before,
+.list__links.list__icons .icon-link:after {
+  width: 1.125em;
+  text-align: center;
+}</code></pre>
+          </div>
+        </div>
         <div id="custom-bullet-mixin" class="docs-component">
           <h2 class="docs-component_header"><span>Custom bullet mixin</span></h2>
           <div class="docs-patterns">
@@ -1742,9 +1891,9 @@ a.category-slug.active {
                 </ul>
                 <ul class="docs-notes">
                   <li>Displays custom bullets to the left of specified elements as :before pseudo elements.</li>
-                  <li>To use, pass this mixin values for the bullet to be displayed: text, color, font size, and offset (distance away from the parent element the bullet should appear).  Font family parameter is optional and defaults to inherited.</li>
-                  <li>Bullets are absolutely positioned outside of their parent's flow, so they will not receive certain properties applied to the parent  (borders, text-decoration, etc).</li>
-                  <li>By default, custom bullets hang outside of their parent's content box  (in the margin or padding if there is any). If you want the bullets to align  with the left boundary of the parent's content box, give the parent a  left margin value equal to the offset.</li>
+                  <li>To use, pass this mixin values for the bullet to be displayed: text, color, font size, and offset (distance away from the parent element the bullet should appear). Font family parameter is optional and defaults to inherited.</li>
+                  <li>Bullets are absolutely positioned outside of their parent's flow, so they will not receive certain properties applied to the parent (borders, text-decoration, etc).</li>
+                  <li>By default, custom bullets hang outside of their parent's content box (in the margin or padding if there is any). If you want the bullets to align with the left boundary of the parent's content box, give the parent a left margin value equal to the offset.</li>
                 </ul>
               </footer>
             </div>
