@@ -2,6 +2,12 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 0.8.0 - 2015-3-23
+
+### Added
+- Adds default and icon list `.list__links` pattern from cfgov-refresh `lists.less`.
+
+
 ## 0.7.0 - 2015-1-21
 
 ### Changed
@@ -21,7 +27,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ### Added
 - Typographical patterns from cf-core & cfgov-refresh:
-    
+
 - From cfgov-refresh `lists.less`:
 - `.list_link`
 - `.list__unstyled`
@@ -29,7 +35,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - `.list_item__spaced`
 - `.list__horizontal`
 - `.list__icons`
-- `.list__links`
+- ~~`.list__links`~~ - added in `0.8.0`.
 
 - From cfgov-refresh `misc.less`:
 - `.micro-copy`
@@ -50,5 +56,3 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - From `cf-core`:
 - `.pull-quote`
 - `.list__branded`
-
-
