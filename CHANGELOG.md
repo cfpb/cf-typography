@@ -2,7 +2,7 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
-## 0.8.0 - 2015-04-01
+## 0.8.1 - 2015-04-01
 
 ### Fixed
 - Restores borders back to the `.block-link` pattern (and, in turn,
