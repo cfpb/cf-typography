@@ -8,6 +8,9 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Restores borders back to the `.block-link` pattern (and, in turn,
   `.jump-link`s).
 
+### Updated
+- cf-icons dependency for docs & demo.
+
 
 ## 0.8.0 - 2015-03-23
 
