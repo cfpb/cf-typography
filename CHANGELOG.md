@@ -2,13 +2,23 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
-## 0.8.0 - 2015-3-23
+## 0.8.1 - 2015-04-01
+
+### Fixed
+- Restores borders back to the `.block-link` pattern (and, in turn,
+  `.jump-link`s).
+
+### Updated
+- cf-icons dependency for docs & demo.
+
+
+## 0.8.0 - 2015-03-23
 
 ### Added
 - Adds default and icon list `.list__links` pattern from cfgov-refresh `lists.less`.
 
 
-## 0.7.0 - 2015-1-21
+## 0.7.0 - 2015-01-21
 
 ### Changed
 - Replaces all CFPB color variables with non-CFPB colors. To add the CFPB theme
@@ -23,7 +33,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Dependencies.
 
 
-## 0.6.0 - 2015-1-15
+## 0.6.0 - 2015-01-15
 
 ### Added
 - Typographical patterns from cf-core & cfgov-refresh:
