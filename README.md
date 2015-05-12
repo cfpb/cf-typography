@@ -1,5 +1,6 @@
 # cf-typography
 
+[![Build Status](https://img.shields.io/travis/cfpb/cf-typography.svg)](https://travis-ci.org/cfpb/cf-typography) 
 [![npm dependency status](https://gemnasium.com/cfpb/cf-typography.svg)](https://gemnasium.com/cfpb/cf-typography)
 
 Advanced typographic patterns, including lists, links, and headers.
