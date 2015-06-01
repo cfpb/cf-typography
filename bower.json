@@ -1,6 +1,6 @@
 {
   "name": "cf-typography",
-  "version": "0.8.1",
+  "version": "1.0.0",
   "description": "Typographic patterns for Capital Framework, including lists, links, and headers.",
   "keywords": [
     "capital-framework",
@@ -22,8 +22,8 @@
   "license": "https://github.com/cfpb/cf-typography/blob/gh-pages/TERMS.md",
   "main": "src/cf-typography.less",
   "dependencies": {
-    "cf-core": "latest",
-    "cf-icons": "latest"
+    "cf-core": "^1.0.0",
+    "cf-icons": "^1.0.0"
   },
   "exportsOverride": {
     "cf-*": {
