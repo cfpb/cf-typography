@@ -180,12 +180,14 @@
 */
 
 .micro-copy {
+    @font-size: 14px;
     color: @micro-copy-text;
-    font-size: unit(14px / @base-font-size-px, em);
+    font-size: unit(@font-size / @base-font-size-px, em);
     .webfont-regular();
 
     &__large {
-        font-size: unit(16px / @base-font-size-px, em);
+        @font-size: 16px;
+        font-size: unit(@font-size / @base-font-size-px, em);
     }
 }
 
@@ -212,7 +214,8 @@
     .webfont-regular();
 
     &__large {
-        font-size: unit(18px / @base-font-size-px, em);
+        @font-size: 18px;
+        font-size: unit(@font-size / @base-font-size-px, em);
     }
 }
 
@@ -759,15 +762,19 @@
 
 .jump-link {
     .webfont-medium();
-    font-size: unit(16px / @base-font-size-px, em);
+    @font-size: 16px;
+
+    font-size: unit(@font-size / @base-font-size-px, em);
 
     .icon-link();
 
     &__large {
-        font-size: unit(18px / @base-font-size-px, em);
+        @font-size: 18px;
+
+        font-size: unit(@font-size / @base-font-size-px, em);
     }
 
-    .respond-to-max(599px, {
+    .respond-to-max(@mobile-max, {
         .block-link();
 
         &:after {
