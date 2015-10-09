@@ -48,14 +48,14 @@
 // Color variables
 
 // .pull-quote
-@pull-quote_body:               #895983;
-@pull-quote_citation:           lighten(#895983, 15%);
+@pull-quote_body:               #2F4F4F;
+@pull-quote_citation:           lighten(@pull-quote_body, 15%);
 
 // .micro-copy
-@micro-copy-text:               lighten(#895983, 15%);
+@micro-copy-text:               #757575;
 
 // .date
-@date-text:                     lighten(#895983, 15%);
+@date-text:                     #757575;
 
 // .category-slug
 @category-slug-text:            darken(#895983, 15%);
@@ -242,8 +242,8 @@
     - name: Default category slug
       markup: |
         <a href="#" class="category-slug">
-            <span class="category-slug_icon cf-icon cf-icon-dialogue"></span>
             <span class="u-visually-hidden">Category:</span>
+            <span class="category-slug_icon cf-icon cf-icon-dialogue"></span>
             Consumer finance
         </a>
       codenotes:
@@ -492,6 +492,7 @@
         <div class="meta-header">
             <a href="#" class="meta-header_right category-slug">
                 <span class="cf-icon cf-icon-credit-card"></span>
+                Credit card
             </a>
             <span class="meta-header_left date">
                 Nov 4, 2013
