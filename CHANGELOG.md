@@ -1,6 +1,8 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.2.0 - 2015-11-01
+- Added @font-size vars to .micro-copy() and .jump-link()
 
 ## 1.1.0 - 2015-10-28
 - Change default colors to match 18F color pallete from US Web Design Standards
