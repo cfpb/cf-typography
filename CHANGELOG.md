@@ -1,6 +1,12 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.3.0 -2015-11-30
+
+### Changed
+- Converted `.h#()` mixins to `.heading-#()` mixins to match cf-core's current usage
+
+
 ## 1.2.0 - 2015-11-01
 - Added @font-size vars to .micro-copy() and .jump-link()
 
