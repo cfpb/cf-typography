@@ -1159,35 +1159,12 @@
 
 
 /* topdoc
- name: Branded list modifier
- family: cf-typography
- patterns:
-   - name: Branded list
-     markup: |
-       <ul class="list__branded">
-           <li>First item</li>
-           <li>Second item</li>
-           <li>Third item</li>
-       </ul>
-     codenotes:
-       - ".list__branded"
-     notes:
-       - "Uses .custom-bullet mixin to generate custom main-brand-color square bullets."
- tags:
-   - cf-typography
-*/
+ notes: .list__branded has been deprecated after the Design Manual team decided
+        to remove it. We should remove this selector in the next full version
+        release.
 
-.list__branded {
-    /* TODO: Why do we need .list_item when li will always be in the list */
-    li,
-    .list_item {
-        @font-size: 22px;
-        @offset: unit(19px / @font-size, em);
-        @size: unit(22px / @base-font-size-px, em);
-        .webfont-regular();
-        .custom-bullet(@text:"\25AA", @color: @list__branded-bullet, @offset: @offset, @size: @size);
-    }
-}
+*/
+.list__branded { }
 
 
 /* topdoc
